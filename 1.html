@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBegun - Animated Stats</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat {
+            width: 150px;
+            font-size: 1.5rem;
+            opacity: 0;
+        }
+
+        .stat h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: transform 0.5s, color 0.5s;
+        }
+
+        .stat p {
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            transform: scale(1.2);
+        }
+
+        #stat1 .counter {
+            color: #4c6ef5; /* Blue for students */
+        }
+
+        #stat2 .counter {
+            color: #ffd43b; /* Yellow for placements */
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTopRight {
+            from {
+                opacity: 0;
+                transform: translate(20px, -20px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="stats-container">
+    <div class="stat" id="stat1">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Students Joined</p>
+    </div>
+    <div class="stat" id="stat2">
+        <h2 class="counter" data-target="55">0</h2>
+        <p>Placements Achieved</p>
+    </div>
+    <div class="stat" id="stat3">
+        <h2 class="counter" data-target="1400000">₹0</h2>
+        <p>Highest Package</p>
+    </div>
+</div>
+
+<script>
+    const animateCounters = (id, target, delays, colors) => {
+        const element = document.querySelector(`#${id} .counter`);
+        const stat = document.querySelector(`#${id}`);
+        const [slowStart, fast, slowEnd] = delays;
+        let current = id === 'stat3' ? 180000 : 0;
+
+        const updateCounter = () => {
+            const increment = current < target * 0.2
+                ? Math.ceil((target * 0.2) / slowStart)
+                : current < target * 0.8
+                ? Math.ceil((target * 0.6) / fast)
+                : Math.ceil((target * 0.2) / slowEnd);
+
+            current += increment;
+            if (current > target) current = target;
+
+            if (id === 'stat3') {
+                element.innerText = `₹${(current / 100000).toFixed(1)}L`;
+
+                if (colors) {
+                    if (current <= 400000) {
+                        element.style.color = colors[0];
+                    } else if (current <= 800000) {
+                        element.style.color = colors[1];
+                    } else {
+                        element.style.color = colors[2];
+                    }
+                }
+            } else {
+                element.innerText = current;
+            }
+
+            if (current < target) {
+                const delay = current < target * 0.2 || current > target * 0.8 ? slowStart : fast;
+                setTimeout(updateCounter, delay);
+            } else {
+                element.innerText += '+'; // Add the '+' symbol after animation completes
+            }
+        };
+
+        stat.style.animation = id === 'stat1' ? 'fadeInTop 1s forwards' : 'fadeInTopRight 1s forwards';
+
+        setTimeout(() => {
+            updateCounter();
+        }, id === 'stat1' ? 0 : id === 'stat2' ? 1500 : 3000);
+    };
+
+    animateCounters('stat1', 100, [100, 20, 100]);
+    animateCounters('stat2', 55, [50, 15, 100], ['#ff6b6b', '#ffa500', '#4caf50']);
+    animateCounters('stat3', 1400000, [100, 50, 30], ['#ff6b6b', '#ffa500', '#4caf50']);
+</script>
+
+</body>
+</html>

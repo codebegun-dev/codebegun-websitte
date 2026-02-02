@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE BEGUN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet" />
+    <link href="../global.css" rel="stylesheet">
+    <style>
+        .form-container {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            color: #005897;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container .form-control {
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #ff5722;
+            border: none;
+        }
+
+        .form-container button:hover {
+            background-color: #e64a19;
+        }
+
+        .stats-section {
+            background-color: #005897;
+            /* Adjust the green background color as needed */
+            color: white;
+            padding: 20px 0;
+            border-radius: 10px;
+        }
+
+        .stats-item {
+            text-align: center;
+            border-right: 1px solid #ffffff50;
+            /* Light border between items */
+        }
+
+        .stats-item:last-child {
+            border-right: none;
+            /* Remove border from the last item */
+        }
+
+        .stats-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .stats-subtitle {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .eligibility-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .eligibility-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .eligibility-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .eligibility-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .eligibility-list li i {
+            color: #005897;
+            margin-right: 10px;
+        }
+
+        .details {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .details .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .details .detail-item i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .details .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .details .value {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tabs-section {
+            padding: 10px 0;
+            background-color: #f9f9f9;
+        }
+
+        .tab-content a {
+            display: block;
+            margin-bottom: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .tab-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/Logos/CB_LOGO_LATEST_TR.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <!-- Left side: Navigation links -->
+                <ul class="navbar-nav" style="margin-top: 30px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="internships.html">Internship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+
+
+                    <button class="btn btn-primary d-flex align-items-center justify-content-center loginbtn">
+                        Log in <span></span>&nbsp;&nbsp; <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="top-banner">
+        Next batch starts <strong id="batchDate">8th November</strong>. Hurry, limited seats left!
+    </div>
+
+
+    <!--Hero Section Start Here-->
+    <section class="internship-hero-section-detail bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Left Content -->
+                <div class="col-lg-8 mb-6 mb-lg-0">
+                    <div class="internship-hero-content-detail">
+                        <!-- <h1>Learn, Build, and Excel –</h1> -->
+                        <!-- <h1>Free</h1> -->
+                        <h1 style="margin-bottom: 30px !important;"><strong
+                                style="color: #0dba4b;text-decoration: underline;text-decoration-color: #F9A61A;">FREE</strong>
+                            45
+                            Days Internship Program</h1>
+
+                        <p style="margin-bottom: 30px !important;">Gain hands-on experience and enhance your skills with
+                            our immersive internship program,
+                            designed to bridge the gap between academics and industry. Work on real-world projects and
+                            become industry-ready with expert mentorship and guidance.
+                        </p>
+
+                        <ul class="eligibility-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Must be a graduate or final year student
+                            </li>
+                            <li><i class="bi bi-check-circle-fill"></i> Basic programming knowledge required</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Passion for learning and upskilling</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Available for a minimum of 45 Days</li>
+                        </ul>
+                    </div>
+
+                    <section class="stats-section" style="margin-top: 50px !important;">
+                        <div class="container">
+                            <div class="row text-center">
+                                <!-- Item 1 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">3 Modules</div>
+                                    <div class="stats-subtitle">with Certifications</div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">45 Hours</div>
+                                    <div class="stats-subtitle">of Live Classes</div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">4.5 Ratings</div>
+                                    <div class="stats-subtitle">by 5000 Learners</div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">Telugu</div>
+                                    <div class="stats-subtitle"> Language</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-4 mb-6">
+                    <div class="container">
+                        <div class="form-container" style="max-height: 450px !important; max-width: 99% !important;">
+                            <h2 class="text-center mb-4">Register Now</h2>
+                            <form>
+                                <!-- Name -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                        required />
+                                </div>
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                        required />
+                                </div>
+                                <!-- Phone -->
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone"
+                                        placeholder="Enter your phone number" required />
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="terms" required />
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the terms and conditions
+                                    </label>
+                                </div>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Register
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Section End Here-->
+
+
+
+    <section class="why-choose-codebegun py-5">
+        <div class="container">
+            <h4 class="text-center mb-4">Why Choose <span class="text-primary">CODEBEGUN</span> Internship?</h4>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-code text-primary me-3"></i>
+                    <div>
+                        <h5>Live Project</h5>
+                        <p class="mb-0">Work on real-world projects and enhance your practical skills.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-users text-primary me-3"></i>
+                    <div>
+                        <h5>Guidance from Industry Leaders</h5>
+                        <p class="mb-0">Get guidance from experienced industry professionals.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-graduation-cap text-primary me-3"></i>
+                    <div>
+                        <h5>Career-Focused Learning Path</h5>
+                        <p class="mb-0">Learn industry-relevant skills to prepare for top tech roles.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-handshake text-primary me-3"></i>
+                    <div>
+                        <h5>Networking Opportunities</h5>
+                        <p class="mb-0">Connect with leading companies and expand your professional network.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-certificate text-primary me-3"></i>
+                    <div>
+                        <h5>Certifications</h5>
+                        <p class="mb-0">Earn certifications recognized by Skill India & NASSCOM.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex align-items-start mb-4">
+                    <i class="icon fa fa-lightbulb text-primary me-3"></i>
+                    <div>
+                        <h5>Innovative Learning</h5>
+                        <p class="mb-0">Learn through an innovative, interactive, and engaging environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="internships-offered py-3 bg-light" id="45daysDetails">
+        <div class="container">
+            <h4 class="text-center" style="margin-bottom: 10px !important;">45 Days Internship Complete Details</h4>
+            <div class="row">
+                <div class="tabs-section">
+                    <!-- Tabs Navigation -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                                type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                                Java
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2"
+                                type="button" role="tab" aria-controls="tab2" aria-selected="false">
+                                React JS
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3"
+                                type="button" role="tab" aria-controls="tab3" aria-selected="false">
+                                Angular
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tabs Content -->
+                    <div class="tab-content mt-4" id="myTabContent">
+                        <!-- Tab 1 Content -->
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <!-- Static Links for Tab 1 -->
+                            <div class="accordion" id="intership-accordionJava">
+                                <!-- Day 00 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading01">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#javaday00" aria-expanded="true" aria-controls="javaday00">
+                                            Day 00 - Introduction about 45 Days Free Internship Program
+                                        </button>
+                                    </h2>
+                                    <div id="javaday00" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading01" data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+                                            <!-- <p>Introduction about 45 Days Free Internship Program</p> -->
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=7KXe5O8BOyw&t=44s"
+                                                        target="_blank">
+                                                        YouTube Link for Details
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                                            aria-controls="collapse1">
+                                            Day 01 - LinkedIn Creation
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=God2QbYVmOs&t=190s"
+                                                        target="_blank">
+                                                        LinkedIn Creation
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                                            aria-controls="collapse2">
+                                            Day 02 - Basics of Computer and its Operations
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=CMEdVZnfc4c"
+                                                        target="_blank">
+                                                        Basics of Computer and its Operations Video
+                                                    </a>
+                                                </li>
+                                                <li><i class="bi bi-file" style="color: #005897;"></i>
+                                                    <a href="basics.html" target=" _blank">
+                                                        Basics of Computer and its Operations
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 03 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                                            aria-controls="collapse3">
+                                            Day 03 - Intro About FullSatck Development
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+                                            <p>Intro About FullSatck Development</p>
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=TEICZYcd8_4"
+                                                        target="_blank">
+                                                        What is FullStck Development
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 04 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                            aria-controls="collapse4">
+                                            Day 04 - GIT Intro Session -1
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=9w1M1NiT5Sc&t=78s"
+                                                        target="_blank">
+                                                        GIT Intro Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 05 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                            aria-controls="collapse5">
+                                            Day 05 - GIT Practical Session -2
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=BXzDjFmMWQE"
+                                                        target="_blank">
+                                                        GIT Practical Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 06 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false"
+                                            aria-controls="collapse6">
+                                            Day 06 - Core Java Intro
+                                        </button>
+                                    </h2>
+                                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=la2S_7igSFI&t=105s"
+                                                        target="_blank">
+                                                        Core Java Intro
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 07 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false"
+                                            aria-controls="collapse7">
+                                            Day 07 - Core Java - &nbsp;&nbsp;<strong> First Program Hello World</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=9H3hKZtH6FI&t=5s"
+                                                        target="_blank">
+                                                        First Program - Hello World
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 08 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false"
+                                            aria-controls="collapse8">
+                                            Day 08 - Core Java - &nbsp;&nbsp;<strong>Assignment Day</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="" target="_blank">
+                                                        Assignment Day
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 09 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false"
+                                            aria-controls="collapse9">
+                                            Day 09 - Core Java - &nbsp;&nbsp;<strong> Variables and Data Types</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=LFfGJhDx1rE&t=4s"
+                                                        target="_blank">
+                                                        Variables and Data Types
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 09 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false"
+                                            aria-controls="collapse10">
+                                            Day 10 - Core Java - &nbsp;&nbsp;<strong>Variables Types</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionJava">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=cYZSPok-hjk&t=19s"
+                                                        target="_blank">
+                                                        Variables Types
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Tab 2 Content -->
+
+
+
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+
+
+                            <div class="accordion" id="intership-accordionReact">
+                                <!-- Day 00 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading01">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#reactday00" aria-expanded="true"
+                                            aria-controls="reactday00">
+                                            Day 00 - Introduction about 45 Days Free Internship Program
+                                        </button>
+                                    </h2>
+                                    <div id="reactday00" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading01" data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+                                            <!-- <p>Introduction about 45 Days Free Internship Program</p> -->
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=7KXe5O8BOyw&t=44s"
+                                                        target="_blank">
+                                                        YouTube Link for Details
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser1" aria-expanded="false"
+                                            aria-controls="collapse1">
+                                            Day 01 - LinkedIn Creation
+                                        </button>
+                                    </h2>
+                                    <div id="collapser1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=God2QbYVmOs&t=190s"
+                                                        target="_blank">
+                                                        LinkedIn Creation
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser2" aria-expanded="false"
+                                            aria-controls="collapser2">
+                                            Day 02 - Basics of Computer and its Operations
+                                        </button>
+                                    </h2>
+                                    <div id="collapser2" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=CMEdVZnfc4c"
+                                                        target="_blank">
+                                                        Basics of Computer and its Operations Video
+                                                    </a>
+                                                </li>
+                                                <li><i class="bi bi-file" style="color: #005897;"></i>
+                                                    <a href="basics.html" target=" _blank">
+                                                        Basics of Computer and its Operations
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 03 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser3" aria-expanded="false"
+                                            aria-controls="collapser3">
+                                            Day 03 - Intro About FullSatck Development
+                                        </button>
+                                    </h2>
+                                    <div id="collapser3" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+                                            <p>Intro About FullSatck Development</p>
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=TEICZYcd8_4"
+                                                        target="_blank">
+                                                        What is FullStck Development
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 04 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser4" aria-expanded="false"
+                                            aria-controls="collapser4">
+                                            Day 04 - GIT Intro Session -1
+                                        </button>
+                                    </h2>
+                                    <div id="collapser4" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=9w1M1NiT5Sc&t=78s"
+                                                        target="_blank">
+                                                        GIT Intro Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 05 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser5" aria-expanded="false"
+                                            aria-controls="collapser5">
+                                            Day 05 - GIT Practical Session -2
+                                        </button>
+                                    </h2>
+                                    <div id="collapser5" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=BXzDjFmMWQE"
+                                                        target="_blank">
+                                                        GIT Practical Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 06 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser6" aria-expanded="false"
+                                            aria-controls="collapser6">
+                                            Day 06 - Frontend Development Intro
+                                        </button>
+                                    </h2>
+                                    <div id="collapser6" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="#" target="_blank">
+                                                        Frontend Development Intro
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 07 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser7" aria-expanded="false"
+                                            aria-controls="collapser7">
+                                            Day 07 - FE - &nbsp;&nbsp;<strong> HTML Intro</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapser7" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=y2gdfIxOIiY"
+                                                        target="_blank">
+                                                        HTML Intro
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 08 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser8" aria-expanded="false"
+                                            aria-controls="collapser8">
+                                            Day 08 - FE - &nbsp;&nbsp;<strong>CSS Into </strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapser8" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=AbvWqtwKES0&t=7s"
+                                                        target="_blank">
+                                                        CSS Intro to HTML
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 09 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser9" aria-expanded="false"
+                                            aria-controls="collapser9">
+                                            Day 09 - FE - &nbsp;&nbsp;<strong> List, Table, Forms</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapser9" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=bWkJl8KynDo&t=22s"
+                                                        target="_blank">
+                                                        HTML - List, Table, Forms
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 10 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapser10"
+                                            aria-expanded="false" aria-controls="collapser10">
+                                            Day 10 - FE - &nbsp;&nbsp;<strong> CSS Selectros</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapser10" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionReact">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=T_S8DyPyfb8"
+                                                        target="_blank">
+                                                        CSS Selectros
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <!-- Tab 3 Content -->
+                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+
+                            <div class="accordion" id="intership-accordionAngular">
+                                <!-- Day 00 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading01">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#angularday00" aria-expanded="true"
+                                            aria-controls="angularday00">
+                                            Day 00 - Introduction about 45 Days Free Internship Program
+                                        </button>
+                                    </h2>
+                                    <div id="angularday00" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading01" data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+                                            <!-- <p>Introduction about 45 Days Free Internship Program</p> -->
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=7KXe5O8BOyw&t=44s"
+                                                        target="_blank">
+                                                        YouTube Link for Details
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear1"
+                                            aria-expanded="false" aria-controls="collapsear1">
+                                            Day 01 - LinkedIn Creation
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=God2QbYVmOs&t=190s"
+                                                        target="_blank">
+                                                        LinkedIn Creation
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear2"
+                                            aria-expanded="false" aria-controls="collapsear2">
+                                            Day 02 - Basics of Computer and its Operations
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear2" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=CMEdVZnfc4c"
+                                                        target="_blank">
+                                                        Basics of Computer and its Operations Video
+                                                    </a>
+                                                </li>
+                                                <li><i class="bi bi-file" style="color: #005897;"></i>
+                                                    <a href="basics.html" target=" _blank">
+                                                        Basics of Computer and its Operations
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 03 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear3"
+                                            aria-expanded="false" aria-controls="collapsear3">
+                                            Day 03 - Intro About FullSatck Development
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear3" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+                                            <p>Intro About FullSatck Development</p>
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=TEICZYcd8_4"
+                                                        target="_blank">
+                                                        What is FullStck Development
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 04 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear4"
+                                            aria-expanded="false" aria-controls="collapsear4">
+                                            Day 04 - GIT Intro Session -1
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear4" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=9w1M1NiT5Sc&t=78s"
+                                                        target="_blank">
+                                                        GIT Intro Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 05 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear5"
+                                            aria-expanded="false" aria-controls="collapsear5">
+                                            Day 05 - GIT Practical Session -2
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear5" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=BXzDjFmMWQE"
+                                                        target="_blank">
+                                                        GIT Practical Session -1
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 06 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear6"
+                                            aria-expanded="false" aria-controls="collapsear6">
+                                            Day 06 - Frontend Development Intro
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear6" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="#" target="_blank">
+                                                        Frontend Development Intro
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 07 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear7"
+                                            aria-expanded="false" aria-controls="collapsear7">
+                                            Day 07 - FE - &nbsp;&nbsp;<strong> HTML Intro</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear7" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=y2gdfIxOIiY"
+                                                        target="_blank">
+                                                        HTML Intro
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 08 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear8"
+                                            aria-expanded="false" aria-controls="collapsear8">
+                                            Day 08 - FE - &nbsp;&nbsp;<strong>CSS Into </strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear8" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=AbvWqtwKES0&t=7s"
+                                                        target="_blank">
+                                                        CSS Intro to HTML
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Day 09 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear9"
+                                            aria-expanded="false" aria-controls="collapsear9">
+                                            Day 09 - FE - &nbsp;&nbsp;<strong> List, Table, Forms</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear9" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=bWkJl8KynDo&t=22s"
+                                                        target="_blank">
+                                                        HTML - List, Table, Forms
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Day 09 of 45 Days -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsear10"
+                                            aria-expanded="false" aria-controls="collapsear10">
+                                            Day 10 - FE - &nbsp;&nbsp;<strong> CSS Selectros</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapsear10" class="accordion-collapse collapse"
+                                        aria-labelledby="heading1" data-bs-parent="#intership-accordionAngular">
+                                        <div class="accordion-body">
+
+                                            <ul class="custom-list">
+                                                <li><i class="bi bi-youtube"></i>
+                                                    <a href="https://www.youtube.com/watch?v=T_S8DyPyfb8"
+                                                        target="_blank">
+                                                        CSS Selectros
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="certificate-showcase py-4 bg-white">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Description -->
+                <div class="col-md-6">
+                    <h4 class="text-primary mb-3">Certificate of Excellence</h4>
+                    <p>
+                        Earn a certificate that validates your skills and expertise. Our certificates are recognized by
+                        industry leaders and provide a competitive edge in the job market. Showcase your achievement and
+                        stand out as a professional.
+                    </p>
+                    <ul>
+                        <li><strong>Recognition of Outstanding Performance</strong> </li>
+                        <P> The Certificate of Excellence serves as a testament to the recipient's exceptional skills,
+                            dedication, and commitment to achieving high standards in their learning journey.</P>
+                        <li><strong>Industry-Validated Achievement</strong> </li>
+                        <p>This certification signifies mastery of real-world projects and cutting-edge technologies,
+                            making it a highly respected credential in the professional world.</p>
+                        <li><strong>Boost to Career Aspirations</strong> </li>
+                        <li><strong>Proof of Practical Expertise</strong> </li>
+                        <li><strong>Inspiration for Lifelong Learning</strong> </li>
+                    </ul>
+
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="col-md-6 text-center">
+                    <img src="../images/interns/courses/certificate.png" alt="Certificate"
+                        class="img-fluid rounded shadow" style="max-height: 450px; max-width: 90% !important;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-us-section bg-light" id="45DaysInternshipContact">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-5 contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Connect with us to explore our hands-on, industry-focused courses designed to elevate your skills
+                        and career prospects. Discover learning tailored for real-world success!</p>
+                    <div class="contact-details">
+
+                        <p><i class="fas fa-phone"></i> <a
+                                href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun Internship Program"
+                                id="contactus">+91-6301099587</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:hr@codebegun.com"
+                                id="contactus">hr@codebegun.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <!-- <div class="col-md-7 contact-form"> -->
+                <!-- <form >
+                        <input type="text" class="form-control" placeholder="Enter Full Name" required>
+                        <input type="text" class="form-control" placeholder="Enter Mobile Number" required>
+                        <input type="email" class="form-control" placeholder="Enter Email Address" required>
+                        <input type="text" class="form-control" placeholder="Enter Subject" required>
+
+
+                        
+                        <div class="my-3">
+                            <label for="internshipSelect" class="form-label">Select Internship:</label>
+                            <select class="form-select" id="internshipSelect" name="internship">
+                                <option value="" disabled selected>-- Choose an Internship --</option>
+                                
+                                <option value="java">Java Internship</option>
+                                <option value="python">Python Internship</option>
+                                <option value=".net">.NET Internship</option>
+                                <option value="mern">Mern Stack Internship</option>
+                                <option value="mean">Mean Stack Internship</option>
+                                <option value="react">React Internship</option>
+                                <option value="angular">Angular Internship</option>
+                                <option value="data-science">Data Science Internship</option>
+                                <option value="data-analyst">Data Analyst Internship</option> 
+                               <option value="ai&ml">AI&ML Internship</option>
+                               <option value="genai">Gen AI internship</option>
+                                <option value="cloudcomputing">Cloud Computing Internship</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" rows="3" placeholder="Enter Your Message" required></textarea>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </form> -->
+                <!-- </div> -->
+
+                <div name="submit-to-google-sheet" class="col-md-7 contact-form" id="contact-form">
+                    <form class="GetInTouch" name="submit-to-google-sheet" id="contactForm">
+                        <input type="text" class="form-control" name="fullName" id="fullName"
+                            placeholder="Enter Full Name" required>
+                        <span class="errorMessage" id="nameError" style="color: red;"></span>
+
+                        <input type="text" class="form-control" name="mobileNumber" id="mobileNumber"
+                            placeholder="Enter Mobile Number" required maxlength="10">
+                        <span class="errorMessage" id="mobileNumberError" style="color: red;"></span>
+
+                        <input type="email" class="form-control" name="emailAdd" id="emailAdd"
+                            placeholder="Enter Email Address" required>
+                        <span class="errorMessage" id="emailError" style="color: red;"></span>
+
+                        <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Enter Subject" required>
+                        <span class="errorMessage" id="subjectError" style="color: red;"></span> -->
+                        <div class="my-3">
+                            <label for="internshipSelect" class="form-label">Select Internship:</label>
+                            <select class="form-select" id="internshipSelect" name="internship">
+                                <option value="" disabled selected>-- Choose an Internship --</option>
+
+                                <option value="java">Java Internship</option>
+                                <option value="python">Python Internship</option>
+                                <option value=".net">.NET Internship</option>
+                                <option value="mern">Mern Stack Internship</option>
+                                <option value="mean">Mean Stack Internship</option>
+                                <option value="react">React Internship</option>
+                                <option value="angular">Angular Internship</option>
+                                <option value="data-science">Data Science Internship</option>
+                                <option value="data-analyst">Data Analyst Internship</option>
+                                <option value="ai&ml">AI&ML Internship</option>
+                                <option value="genai">Gen AI internship</option>
+                                <option value="cloudcomputing">Cloud Computing Internship</option>
+                            </select>
+                        </div>
+
+                        <textarea class="form-control" rows="3" name="message" id="message"
+                            placeholder="Enter Your Message" required></textarea>
+                        <span class="errorMessage" id="messageError" style="color: red;"></span>
+
+                        <button type="submit" class="btn submit-btn" id="submitButton"
+                            onclick="validateForm()">Submit</button>
+                        <div class="success" id="successMessage" style="color: green;"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Contact Info -->
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="../images/Logos/CB_LOGO_LATEST.png" alt="Logo" style="width: 200px !important;">
+                    </div>
+                    <p>Reach Us</p>
+
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun">+91-63010
+                        99 587</a></p>
+                    <p id="Reachus"><i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/919392401143?text=Hello%20!!.%I want to Know about %20to%20codebegun">
+                            +91-93924 01 143</a>
+                    </p>
+                    <p id="Reachus"><i class="fab fa-whatsapp"></i> <a
+                            href="https://wa.me/919392402848?text=Hello%20!!.%I want to Know about %20to%20codebegun">
+                            +91-93924 02 848
+                        </a></p>
+
+                    <p id="Reachus"><i class="fas fa-envelope"></i> <a
+                            href="mailto:hr@codebegun.com">hr@codebegun.com</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 quick-links">
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#course-list">Courses</a></li>
+                        <li><a href="internships.html">Internship</a></li>
+                        <li><a href="#">Challanges</a></li>
+                        <li><a href="#">Hire with Us</a></li>
+                        <li><a href="#45DaysInternshipContact">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 quick-links">
+
+                    <h5>Courses</h5>
+                    <ul>
+                        <li><a href="pages/javafullstackmain.html">Java Full Stack</a></li>
+                        <li><a href="pages/mernStack.html">MERN Stack</a></li>
+                        <li><a href="pages/meanStack.html">MEAN Satck</a></li>
+                        <li><a href="pages/pythonfullStack.html">Python Full Stack </a></li>
+                        <li><a href="pages/reactJsDevelopment.html">React JS</a></li>
+                        <li><a href="pages/angularJsDevelopment.html">Angular Development</a></li>
+                        <li><a href="pages/datascience.html">Data Science</a></li>
+                        <li><a href="pages/dataAnalytics.html">Data Analytics</a></li>
+                        <li><a href="pages/genAI.html">Gen AI</a></li>
+                        <li><a href="pages/ai&Ml.html">AI&Ml</a></li>
+                        <li><a href="pages/cloudcomputing.html">Cloud Computing</a></li>
+                        <li><a href="pages/dotNet.html">.Net FullSatck</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+
+                    <h5>Locations</h5>
+                    <h6>Madhapur</h6>
+
+                    <p> Plot No.4, Flat N0.102, SM Reddy Complex, House No.1-98/8/9/A, Madhapur, Hyderabad, Telangana
+                        500081</p>
+
+                    <h6>Ameerpet</h6>
+
+                    <p>3rd Floor, Plot No. 47, SAP St, beside Mythrivanam, Kumar Basti, Gayatri Nagar, Srinivasa Nagar,
+                        Ameerpet, Hyderabad, Telangana 500016</p>
+
+
+                </div>
+
+            </div>
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1ut7vgqnTQdE82tS/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/codbegun/posts/?feedView=all" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@CodeBegun" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/codebegun/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="grievance-redressal.html">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="corporate-information.html">Corporate Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                        <li><a href="vision-and-values.html">Vision and Values</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Course Tracks -->
+            <div class="row course-tracks">
+                <div class="col-md-12">
+                    <h6>Course Tracks</h6>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>MERN Stack Developer course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>Full Stack Developer course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Pune</a>, <a href="#">Delhi</a>, <a
+                                href="#">Chennai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>Data Analytics course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                href="#">Delhi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>QA / Automation Testing course:</strong></li>
+                        <li><a href="#">Bangalore</a>, <a href="#">Hyderabad</a>,<a href="#">Chennai</a>,<a
+                                href="#">Pune</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-center">
+                <p>&copy; 2024 Savas Tech Solution Pvt Ltd | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const firstNameField = document.getElementById("name");
+            if (firstNameField) {
+                firstNameField.focus();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo-1.png">
+    <title>CODE BEGUN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!--To store data in execlsheets  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53S30J9XXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-53S30J9XXT');
+</script>
+
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .stats-container {
+            /* display: flex; */
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat {
+            width: 200px;
+            font-size: 1.5rem;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: transform 0.5s, color 0.5s;
+            margin-top: 20px !important;
+        }
+
+        .stat p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #005897;
+        }
+
+        #stat1 p {
+            color: #F9A61A;
+            /* Blue for students */
+        }
+        #stat2 p {
+            color: #005897;
+            /* Blue for students */
+        }
+        #stat3 p {
+            color:#359aad;
+            /* Blue for students */
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            transform: scale(1.2);
+        }
+
+        #stat1 .counter {
+            color:#005897;
+            /* Blue for students */
+        }
+
+        #stat2 .counter {
+            color: #F9A61A;
+            /* Yellow for placements */
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTopRight {
+            from {
+                opacity: 0;
+                transform: translate(20px, -20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV378767"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Logos/CB_LOGO_LATEST_TR.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <!-- Left side: Navigation links -->
+                    <ul class="navbar-nav" style="margin-top: 30px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#course-list">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/internships.html">Internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Events</a>
+                        </li>
+
+                    </ul>
+                    <div class="d-flex">
+
+                        <!-- <button class="login-btn">
+                        Log in <span>&rarr;</span>
+                    </button> -->
+                        <button
+                            class="btn btn-primary d-flex align-items-center justify-content-center loginbtn open-popup-btn">
+                            Log in <span></span>&nbsp;&nbsp; <span>&rarr;</span>
+                        </button>
+                        <div class="popup-overlay" id="popup">
+                            <div class="popup-content">
+                                <span class="close-btn" id="closeBtn">&times;</span>
+
+                                <h2 style="font-family: roboto; font-weight: bold; color:solid black;">Login</h2>
+                                <!-- <button><a href="#contact-form"><i class="fa-solid fa-xmark"></i></a></button> -->
+
+                                <form id="login-signup">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" placeholder="Enter your username" required>
+
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" placeholder="Enter your password" required>
+
+                                    <button type="submit" class="submit-btn">Login</button>
+                                </form>
+                                <p>Not Registered Yet!!</p>
+
+                                <button class=" btn-primary signup btn open-popup-btn">Signup</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+
+        <div class="top-banner">
+            <a href="#contact-form" style="text-decoration: none; color: white;"> Data Analytics
+                Next batch starts <strong id="batchDate"> on Monday 9th Feb,2026</strong>. Hurry,
+                8 seats left!
+            </a>
+        </div>
+        
+          <div class="top-banner">
+            <a href="#contact-form" style="text-decoration: none; color: white;"> Java Full Stack With AI
+                Next batch starts <strong id="batchDate"> on Monday 18th Feb,2026</strong>. Hurry,
+                13 seats left!
+            </a>
+        </div>
+
+
+        <!-- <div class="top-banner">
+        <div class="row">
+            <div class="col-6">
+                <h4>Over<strong> 1200+</strong> Studets Got Trained and <strong>400+</strong> Students Got Placed
+                    Successfully</h4>
+                <h4>Strong Realtion with <strong> 100+</strong> Compaines </h4>
+
+            </div>
+            <div class="col-6">
+                <h4>1200 Studets Got Trained</h4>
+                <h4>120 + Students Placed</h4>
+            </div>
+        </div>
+    </div> -->
+        <!-- <div class="top-banner">
+        <div class="row align-items-center" style="height: 40px !important;">
+            <div class="col-6">
+                <h4><strong> 400+</strong> Students Placed | <strong>150+</strong> Companies | <strong>200+</strong>
+                    Colleges | <strong>2000+</strong> Internships</h4>
+            </div>
+            <div class="col-6">
+                <h5>Next batch starts <strong id="batchDate">8th November</strong>. Hurry,
+                    limited seats left!</h5>
+            </div>
+
+        </div>
+    </div> -->
+        <div class="responsive">
+            <section class="hero-section container">
+                <div class="row">
+                    <!-- Left Side: Text and CTA -->
+                    <div class="col-md-6  hero-left flex-column justify-content-center">
+         
+
+                        <h4 id="expert-section">
+                            <span
+                                style="font-size: medium;  font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-left: 58px;"><strong>L</strong>
+                                E A R
+                                N</span> <span
+                                style="font-size: medium; font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-right: 8px;">f
+                                r o
+                                m</span>
+                            <span id="expert">Experts</span>
+                            <br>
+                            <span
+                                style="font-size: medium;  font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-right: 10px;"><strong>B</strong>
+                                U I L D
+                            </span>
+                            <span
+                                style="font-size: medium;  font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-right: 16px;">
+                                I n - D e m a n d </span>
+                            <span>Skills</span> <br>
+
+                            <span
+                                style="font-size: medium;  font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-right: 12px; margin-left: 27px;">
+                                <strong>L</strong>
+                                A U N C H
+                            </span><span
+                                style="font-size: medium; font-family:'Roboto,sans-serif !important'; font-weight: bold; margin-right: 5px;">Y
+                                o
+                                u r</span>
+                            <span>Tech Career</span>
+                        </h4>
+
+          
+
+                        <section class="mission-vision-section container">
+                            <div class="row">
+                                <!-- Mission Section -->
+                                <div class="col-12 col-md-4">
+
+                                    <div class="stat" id="stat1">
+                                        <h2 class="counter" data-target="100">0</h2>
+                                        <p>Students Joined</p>
+                                    </div>
+                               
+                                </div>
+
+                                <!-- Vision Section -->
+                                <div class="col-12 col-md-4">
+                                    <div class="stat" id="stat2">
+                                        <h2 class="counter" data-target="80">0</h2>
+                                        <p>Placements Achieved</p>
+                                    </div>
+                              
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="stat" id="stat3">
+                                        <h2 class="counter" data-target="1400000">₹0</h2>
+                                        <p>Highest Package</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                    </div>
+                    <!-- Right Side: Image or Video -->
+                    <div class="col-md-5 hero-right d-flex justify-content-center align-items-center img_1">
+
+                        <img src="images/bg-images/bg3.png" alt="Technology Image" class="img-fluid">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="recognitions-section">
+            <div class="container">
+                <h4>Recognitions & Memberships</h4>
+                <div class="row recognitions-logos d-flex  justify-content-center">
+
+                    <div class="col-md-2 col-4">
+                        <img src="images/certificates/skin.png" alt="Skill India Certification">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <img src="images/imagesmain/nasscom1.webp" alt="NASSCOM Membership">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <img src="images/certificates/1.png" alt="Skill India">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <img src="images/imagesmain/iso1.webp" alt="AWS Certified">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <img src="images/certificates/Untitled design (53).png" alt="Google Partner">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <img src="images/certificates/msme2.png" alt="MSME" id="emb">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="why-choose-section bg-white">
+            <div class="container">
+                <h4>Why Choose CodeBegun?</h4>
+                <div class="row g-4">
+                    <!-- Card 1: Expert Guidance -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-chalkboard-teacher"></i> <!-- Icon for Expert Guidance -->
+                            </div>
+                            <h5>Skilled Direction</h5>
+                            <p>At CodeBegun, we connect you with industry experts who bring invaluable real-world
+                                insights
+                                directly to your learning. Our instructors are not just teachers—they’re seasoned
+                                professionals dedicated to mentoring you every step of the way</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Hands-On Learning -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-laptop-code"></i> <!-- Icon for Hands-On Learning -->
+                            </div>
+                            <h5>Practical Experience</h5>
+                            <p>At CodeBegun, you learn by doing. Each lesson is packed with real projects and coding
+                                exercises so you can build skills that truly stick. With hands-on practice, you’ll be
+                                ready
+                                to tackle real-world tech challenges with confidence.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Job-Ready Curriculum -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-briefcase"></i> <!-- Icon for Job-Ready Curriculum -->
+                            </div>
+                            <h5>Job-Ready Curriculum</h5>
+                            <p>Our curriculum is designed to get you hired. We focus on the skills and tools top
+                                companies
+                                need, so you’re prepared from day one. With CodeBegun, you’ll build a portfolio that
+                                shows
+                                employers you’re ready to make an impact.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Personalized Mentorship -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-user-friends"></i> <!-- Icon for Personalized Mentorship -->
+                            </div>
+                            <h5>One-on-One Mentorship</h5>
+                            <p>At CodeBegun, you get one-on-one support tailored to your goals. Our mentors guide you
+                                through challenges, answer your questions, and keep you on track. With their help,
+                                you’ll
+                                grow faster and stay confident in your learning journey.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5: Industry Connections -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-handshake"></i> <!-- Icon for Industry Connections -->
+                            </div>
+                            <h5>Industry Connections</h5>
+                            <p>CodeBegun connects you with top tech companies and industry leaders. Through our network,
+                                you’ll find opportunities for internships, projects, and jobs. We open doors so you can
+                                start your career with strong connections and real-world experience.</p>
+                        </div>
+                    </div>
+                    <!-- Card 6: Real-World Projects -->
+                    <div class="col-md-4">
+                        <div class="choose-card p-4 text-center">
+                            <div class="choose-icon">
+                                <i class="fas fa-project-diagram"></i> <!-- Icon for Real-World Projects -->
+                            </div>
+                            <h5>Real-World Projects</h5>
+                            <p>At CodeBegun, you learn by building projects that mirror real industry challenges. Each
+                                project helps you apply what you’ve learned. With
+                                hands-on experience, you’ll be ready to solve real problems in the tech world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Courese List Section -->
+
+        <section class="courses-section py-5 mt-3 bg-light" id="course-list">
+            <div class="container">
+                <h4> Offered Courses</h4>
+                <div class="row" id="courses-offered">
+                    <div class="col-md-5 smspace">
+                        <div class="course-card">
+                            <img src="images/Courses/js4.png" alt="Course Image">
+                            <div class="card-body">
+                                <p class="session-info">
+                                    <i class="bi bi-calendar"></i> 40 Sessions
+                                </p>
+                                <p class="duration-info">
+                                    <i class="bi bi-clock"></i> 12 Weeks
+                                </p>
+                                <h5 id="card-offered-courses">JAVA Full Stack</h5>
+                                <div class="rating">
+                                    ★★★★☆ (4.9)
+                                </div>
+                                <p class="skills">
+                                    Java | HTML | CSS | JavaScript | React
+                                </p>
+                                <p class="mb-3">Hybrid with Job Assistance</p>
+                                <a href="pages/javafullstackmain.html" class="btn btn-primary explore-btn">Explore
+                                    Now</a>
+                                <a href="pages/javafullstackmain.html" class="btn btn-success buy-btn">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Course Card 2 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/reactjs.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 36 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 10 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">MERN Stack </h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★★ (4.9)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                React | Expess | Node | MongoDB-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/mernStack.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/mernStack.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 3 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/python.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 40 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 12 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">Python Full Stack</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.8)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                HTML | CSS | JavaScript | React | Python-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/pythonfullStack.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/pythonfullStack.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 4 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/ml.gif" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 36 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 10 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">.Net FullStack</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★★ (4.9)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                HTML | CSS | C# | SQL Server | LINQ -->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/dotNet.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/dotNet.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 1 -->
+
+                </div>
+                <div class="row mt-4 smspace">
+                    <!-- Course Card 1 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/reactjs.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 36 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 10 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">React Js Development</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★★ (4.9)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                HTML | CSS | JavaScript | React-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/reactJsDevelopment.html" class="btn btn-primary explore-btn">Explore-->
+                    <!--                Now</a>-->
+                    <!--            <a href="pages/reactJsDevelopment.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 2 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/angular.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 50 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 20 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">Angular Development</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.9)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                HTML | CSS | JavaScript | Angular-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Online With Job Assistance</p>-->
+                    <!--            <a href="pages/angularJsDevelopment.html" class="btn btn-primary explore-btn">Explore-->
+                    <!--                Now</a>-->
+                    <!--            <a href="pages/angularJsDevelopment.html" class="btn btn-success buy-btn">Get-->
+                    <!--                Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 3 -->
+
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/angular.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 50 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 20 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">MEAN Stack</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.9)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                MongoDB | Express | Angular | Node-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Online With Job Assistance</p>-->
+                    <!--            <a href="pages/meanStack.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/meanStack.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 4 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/ds1.gif" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 44 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 16 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">Data Science</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.8)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                Statistics | Visualization | EDA | BI-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/datascience.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/datascience.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+
+                <!-- Course Card 1 -->
+
+                <div class="row mt-4 smspace">
+                    <!--<div class="col-md-3">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/dataanalyst.png" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 44 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 16 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">Data Analytics</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.8)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                Statistics | Visualization | EDA | BI-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/dataAnalytics.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/dataAnalytics.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!-- Course Card 2 -->
+
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/ds1.gif" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 44 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 16 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">GEN AI</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.8)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                Statistics | Visualization | EDA | BI-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Hybrid with Job Assistance</p>-->
+                    <!--            <a href="pages/genAI.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/genAI.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+
+
+
+
+                    <!-- Course Card 3 -->
+                    <!--<div class="col-md-3 smspace">-->
+                        <!--<div class="course-card">-->
+                        <!--    <img src="images/Courses/ml.gif" alt="Course Image">-->
+                        <!--    <div class="card-body">-->
+                        <!--        <p class="session-info">-->
+                        <!--            <i class="bi bi-calendar"></i> 36 Sessions-->
+                        <!--        </p>-->
+                        <!--        <p class="duration-info">-->
+                        <!--            <i class="bi bi-clock"></i> 10 Weeks-->
+                        <!--        </p>-->
+                        <!--        <h5 id="card-offered-courses">AI&Ml</h5>-->
+                        <!--        <div class="rating">-->
+                        <!--            ★★★★★ (4.9)-->
+                        <!--        </div>-->
+                        <!--        <p class="skills">-->
+                        <!--            Python | AI | Data Science-->
+                        <!--        </p>-->
+                        <!--        <p class="mb-3">Hybrid with Job Assistance</p>-->
+                        <!--        <a href="pages/ai&Ml.html" class="btn btn-primary explore-btn">Explore-->
+                        <!--            Now</a>-->
+                        <!--        <a href="pages/ai&Ml.html" class="btn btn-success buy-btn">Get-->
+                        <!--            Started</a>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- Course Card 4 -->
+                    <!--<div class="col-md-3 smspace">-->
+                    <!--    <div class="course-card">-->
+                    <!--        <img src="images/Courses/ccing.gif" alt="Course Image">-->
+                    <!--        <div class="card-body">-->
+                    <!--            <p class="session-info">-->
+                    <!--                <i class="bi bi-calendar"></i> 50 Sessions-->
+                    <!--            </p>-->
+                    <!--            <p class="duration-info">-->
+                    <!--                <i class="bi bi-clock"></i> 20 Weeks-->
+                    <!--            </p>-->
+                    <!--            <h5 id="card-offered-courses">Cloud Computing</h5>-->
+                    <!--            <div class="rating">-->
+                    <!--                ★★★★☆ (4.7)-->
+                    <!--            </div>-->
+                    <!--            <p class="skills">-->
+                    <!--                AWS | Azure | Google Cloud-->
+                    <!--            </p>-->
+                    <!--            <p class="mb-3">Online with Cloud Labs</p>-->
+                    <!--            <a href="pages/cloudcomputing.html" class="btn btn-primary explore-btn">Explore Now</a>-->
+                    <!--            <a href="pages/cloudcomputing.html" class="btn btn-success buy-btn">Get Started</a>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="alumni-section">
+            <div class="container">
+                <h4>Our Alumni Work with Top Firms</h4>
+                <div class="row alumni-logos d-flex justify-content-center">
+                    <!-- Replace the src with your actual company logos -->
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/winwire-1.png" alt="Winwire">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c2.webp" alt="Amazon">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c3.webp" alt="Microsoft">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c4.webp" alt="Facebook">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/capgemini.png" alt="Facebook">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/darwinbox.png" alt="Facebook">
+                    </div>
+
+
+                </div>
+                <div class="row alumni-logos d-flex justify-content-center">
+                    <!-- Replace the src with your actual company logos -->
+
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c9.webp" alt="Microsoft">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c10.webp" alt="Facebook">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c11.webp" alt="IBM">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c12.webp" alt="TCS">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/tcs.png" alt="Facebook">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/toshiba.png" alt="Facebook">
+                    </div>
+
+                </div>
+                <div class="row alumni-logos d-flex justify-content-center">
+                    <!-- Replace the src with your actual company logos -->
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c5.webp" alt="IBM">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/imagesmain/c6.webp" alt="TCS">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/accenture.png" alt="IBM">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/wipro.png" alt="TCS">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/cognizant.png" alt="Facebook">
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <img src="images/Recogniation/ss.png" alt="Facebook">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h4>Trusted and loved by students worldwide.</h4>
+                <div class="row">
+                    <!-- Testimonial 1 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "One of the best institutes in Hyderabad. The Java Full Satck course was excellent."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/7.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Sharath</div>
+                                    <!-- <div class="testimonial-author-title">Software Engineer</div>
+                                <div class="testimonial-author-name">6.5 LPA</div>
+                                <div class="testimonial-author-title"><strong>WinWire</strong></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "Thanks to the Java Full Stack training, I gained the skills and confidence to land my
+                                dream
+                                job!. Thank you!"
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/1.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Vamsi</div>
+                                    <!-- <div class="testimonial-author-title">Software Engineer</div>
+                                <div class="testimonial-author-name">5 LPA</div>
+                                <div class="testimonial-author-title"><strong>WinWire</strong></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Testimonial 3 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "Great institute to learn Java Full Stack. The curriculum is well-designed."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/3.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Abdul Azeez</div>
+                                    <!-- <div class="testimonial-author-title">Software Engineer</div>
+                                <div class="testimonial-author-name">5 LPA</div>
+                                <div class="testimonial-author-title"><strong>Concentrix</strong></div> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row of Testimonials -->
+                <div class="row mt-4">
+                    <!-- Testimonial 4 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "I enrolled in the React JS course and had a great experience. The hands-on training and
+                                placement assistance were outstanding."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/4.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Anup Venkat</div>
+                                    <!-- <div class="testimonial-author-title">AWS Engineer</div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "Python FullSatck curriculum is very comprehensive, and the trainers are helpful. I got
+                                placed
+                                in a good company after completing the course."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/5.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Raghu</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                "I highly recommend this institute for its expert training in Java FullSatck. The
+                                trainers
+                                provided
+                                excellent support, got the Job"
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/Reviews/6.png" alt="Author">
+                                <div>
+                                    <div class="testimonial-author-name">Ashok</div>
+                                    <!-- <div class="testimonial-author-title">DevOps Engineer</div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                Testimonial 1 -
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>John Doe</h5>
+                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+
+                Testimonial 2 (Central Circular Design) -
+                <div class="col-md-4">
+                    <div class="testimonial-circle">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>Jane Smith</h5>
+                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt."
+                        </p>
+                        <p>Software Engineer</p>
+                    </div>
+                </div>
+
+                Testimonial 3 -
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>Michael Lee</h5>
+                        <p class="quote">"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </div>
+            </div>
+
+             Second Row of Testimonials 
+            <div class="row mt-4">
+                Testimonial 4 --
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>Sarah Walker</h5>
+                        <p class="quote">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."</p>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+
+               Testimonial 5 --
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>Robert Brown</h5>
+                        <p class="quote">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."</p>
+                        <p>Data Scientist</p>
+                    </div>
+                </div>
+
+                Testimonial 6 --
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/80" alt="Person">
+                        <h5>Emily Davis</h5>
+                        <p class="quote">"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia."
+                        </p>
+                        <p>Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+        <!-- <section class="contact-us-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-md-6 contact-form">
+                    <h2>Get in touch</h2>
+                    <p>We are here for you! How can we help?</p>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <input type="email" class="form-control" placeholder="Enter your email address">
+                        <textarea class="form-control" rows="3" placeholder="Go ahead, we are listening..."></textarea>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </form>
+                </div>
+
+              
+                <div class="col-md-4 contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 564 Alabama Avenue</p>
+                    <p><i class="fas fa-phone"></i> +465723732666</p>
+                    <p><i class="fas fa-envelope"></i> contact@admin.com</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <!-- Placement Section -->
+
+
+        <!-- Hero Section -->
+
+
+        <!-- Placement Carousel Section -->
+        <section class="placement-carousel-section">
+            <div class="container">
+                <h4>Our Students' Success</h4>
+
+                <div id="placementCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
+                        <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="1"></button>
+                    </div>
+
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/p2.png" alt="John Smith">
+                                        <img src="images/Recogniation/wipro.png" alt="wipro Logo" class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Sri Latha</h5>
+                                            <h6>4.5 LPA</h6>
+                                            <div class="position-title">Full Stack Developer</div>
+                                            <!-- <p>"Don't be scared of the truth because we need to restart the human
+                                            foundation."</p> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/1.png" alt="Clementine Thson">
+                                        <img src="images/Recogniation/accenture.png" alt="accenture Logo"
+                                            class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Raghu C</h5>
+                                            <h6>6 LPA</h6>
+                                            <div class="position-title">Java Developer</div>
+
+                                        </div>
+                                        <!-- <div class="social-icons">
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-dribbble"></i>
+                                        <i class="fab fa-instagram"></i>
+                                    </div> -->
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/rk.png" alt="Elanor Aline">
+                                        <img src="images/Recogniation/infosys.png" alt="Infosys Logo"
+                                            class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Ramakrishna</h5>
+                                            <h6>4.5 LPA</h6>
+                                            <div class="position-title">Front End Developer</div>
+                                            <!-- <p>"Don't be scared of the truth because we need to restart the human
+                                            foundation."</p> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/rahul.png" alt="Student Photo">
+                                        <img src="images/Recogniation/capgemini.png" alt="Company Logo"
+                                            class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Rahul</h5>
+                                            <h6>4.5 LPA</h6>
+                                            <div class="position-title">React JS Developer</div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/6.png" alt="Student Photo">
+                                        <img src="images/Recogniation/sigmasoft.png" alt="Infosys" class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Srikar</h5>
+                                            <h6>8 LPA</h6>
+                                            <div class="position-title">Angular Developer</div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="placement-card">
+                                        <img src="images/placement-images/5.png" alt="Student Photo">
+                                        <img src="images/Recogniation/toshiba.png" alt="Company Logo"
+                                            class="company-logo">
+                                        <div class="student-info">
+                                            <h5>Charan</h5>
+                                            <h6>6.5 LPA</h6>
+                                            <div class="position-title">Full Satck Developer</div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#placementCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#placementCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-us-section bg-white" id="homepageContact">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Information -->
+                    <div class="col-md-5 contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>Connect with us to explore our hands-on, industry-focused courses designed to elevate your
+                            skills
+                            and career prospects. Discover learning tailored for real-world success!</p>
+                        <div class="contact-details">
+
+                            <p><i class="fas fa-phone"></i> <a
+                                    href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun"
+                                    id="contactus">+91-6301099587</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:hr@codebegun.com"
+                                    id="contactus">hr@codebegun.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                   
+                    <!-- <div name="submit-to-google-sheet" class="col-md-7 contact-form" id="contact-form">
+                        <form class="GetInTouch" name="submit-to-google-sheet" id="contactForm">
+                            <input type="text" class="form-control" name="fullName" id="fullName"
+                                placeholder="Enter Full Name" required>
+                            <span class="errorMessage" id="nameError" style="color: red;"></span>
+
+                            <input type="text" class="form-control" name="mobileNumber" id="mobileNumber"
+                                placeholder="Enter Mobile Number" required maxlength="10">
+                            <span class="errorMessage" id="mobileNumberError" style="color: red;"></span>
+
+                            <input type="email" class="form-control" name="emailAdd" id="emailAdd"
+                                placeholder="Enter Email Address" required>
+                            <span class="errorMessage" id="emailError" style="color: red;"></span>
+
+                            <div class="my-3">
+                                <label for="internshipSelect" class="form-label">Select Course:</label>
+                                <select class="form-select" id="internshipSelect" name="internship">
+                                    <option value="" disabled selected>-- Choose a Course --</option>
+                                    <option value="java">Java FullStack</option>
+                                    <option value="python">Python FullStack</option>
+                                    <option value="angular">Angular Developement</option>
+                                    <option value="react">React Developement</option>
+                                    <option value="data-science">Data Science </option>
+                                    <option value="data-analyst">Data Analyst</option>
+                                    <option value=".net">.Net FullStack </option>
+                                    <option value="cloudcomputing">Cloud Computing</option>
+                                    <option value="mern">Mern Stack</option>
+                                    <option value="mean">Mean Stack</option>
+                                    <option value="ai&ml">AI&ML</option>
+                                    <option value="gen-ai">Gen AI</option>
+                                </select>
+                            </div>
+
+                            <textarea class="form-control" rows="3" name="message" id="message"
+                                placeholder="Enter Your Message" required></textarea>
+                            <span class="errorMessage" id="messageError" style="color: red;"></span>
+
+                            <button type="submit" class="btn submit-btn" id="submitButton"
+                                onclick="validateForm()">Submit</button>
+                            <div class="success" id="successMessage" style="color: green;"></div>
+                        </form>
+                    </div> -->
+
+
+                    <div   name="submit-to-google-sheet" class="col-md-7 contact-form" id="contact-form">
+                        <form class="GetInTouch" name="submit-to-google-sheet" id="contactForm">
+                            <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter Full Name" required>
+                            <span class="errorMessage" id="nameError" style="color: red;"></span>
+                    
+                            <input type="text" class="form-control" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile Number" required maxlength="10">
+                            <span class="errorMessage" id="mobileNumberError" style="color: red;"></span>
+                    
+                            <input type="email" class="form-control" name="emailAdd" id="emailAdd" placeholder="Enter Email Address" required>
+                            <span class="errorMessage" id="emailError" style="color: red;"></span>
+                    
+                            <div class="my-3">
+                                <label for="internshipSelect" class="form-label">Select Course:</label>
+                                <select class="form-select" id="internshipSelect" name="course">
+                                    <option value="" disabled selected>-- Choose a Course --</option>
+                                    <option value="java">Java FullStack</option>
+                                    <option value="python">Python FullStack</option>
+                                    <option value="angular">Angular Development</option>
+                                    <option value="react">React Development</option>
+                                    <option value="data-science">Data Science</option>
+                                    <option value="data-analyst">Data Analyst</option>
+                                    <option value=".net">.Net FullStack</option>
+                                    <option value="cloudcomputing">Cloud Computing</option>
+                                    <option value="mern">MERN Stack</option>
+                                    <option value="mean">MEAN Stack</option>
+                                    <option value="ai&ml">AI & ML</option>
+                                    <option value="gen-ai">Gen AI</option>
+                                </select>
+                            </div>
+                    
+                            <textarea class="form-control" rows="3" name="message" id="message" placeholder="Enter Your Message" required></textarea>
+                            <span class="errorMessage" id="messageError" style="color: red;"></span>
+                    
+                            <button type="button" class="btn submit-btn" id="submitButton" onclick="handleFormSubmit()">Submit</button>
+                            <div class="success" id="successMessage" style="color: green;"></div>
+                        </form>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo & Contact Info -->
+                    <div class="col-md-3">
+                        <div class="footer-logo">
+                            <img src="images/Logos/CB_LOGO_LATEST.png" alt="Logo" style="width: 160px !important;">
+                        </div>
+                        <p id="Reachus">Reach Us</p>
+
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun">+91-63010
+                            99 587</a></p>
+                        <p id="Reachus"><i class="fab fa-whatsapp"></i>
+                            <a
+                                href="https://wa.me/919392401143?text=Hello%20!!.%I want to Know about %20to%20codebegun">
+                                +91-93924 01 143</a>
+                        </p>
+                        <p id="Reachus"><i class="fab fa-whatsapp"></i> <a
+                                href="https://wa.me/919392402848?text=Hello%20!!.%I want to Know about %20to%20codebegun">
+                                +91-93924 02 848
+                            </a></p>
+
+                        <p id="Reachus"><i class="fas fa-envelope"></i> <a
+                                href="mailto:hr@codebegun.com">hr@codebegun.com</a></p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-3 quick-links">
+                        <h5>Quick Links</h5>
+
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#course-list">Courses</a></li>
+                            <li><a href="pages/internships.html">Internship</a></li>
+                            <li><a href="#">Challanges</a></li>
+                            <li><a href="#">Hire with Us</a></li>
+                            <li><a href="#contact-form">Contact Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 quick-links">
+
+                        <h5>Courses</h5>
+                        <ul>
+                            <li><a href="pages/javafullstackmain.html">Java Full Stack</a></li>
+                            <li><a href="pages/mernStack.html">MERN Stack</a></li>
+                            <li><a href="pages/meanStack.html">MEAN Stack</a></li>
+                            <li><a href="pages/pythonfullStack.html">Python Full Stack </a></li>
+                            <li><a href="pages/reactJsDevelopment.html">React JS</a></li>
+                            <li><a href="pages/angularJsDevelopment.html">Angular Development</a></li>
+                            <li><a href="pages/datascience.html">Data Science</a></li>
+                            <li><a href="pages/dataAnalytics.html">Data Analytics</a></li>
+                            <li><a href="pages/genAI.html">Gen AI</a></li>
+                            <li><a href="pages/ai&Ml.html">AI&Ml</a></li>
+                            <li><a href="pages/cloudcomputing.html">Cloud Computing</a></li>
+                            <li><a href="pages/dotNet.html">.Net FullSatck</a></li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <h5>Locations</h5>
+                        <h6>Madhapur</h6>
+
+                        <p> Plot No.4, Flat N0.102, SM Reddy Complex, House No.1-98/8/9/A, Madhapur, Hyderabad,
+                            Telangana
+                            500081</p>
+
+                        <h6>Ameerpet</h6>
+
+                        <p>3rd Floor, Plot No. 47, SAP St, beside Mythrivanam, Kumar Basti, Gayatri Nagar, Srinivasa
+                            Nagar,
+                            Ameerpet, Hyderabad, Telangana 500016</p>
+
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/share/1ut7vgqnTQdE82tS/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/codbegun/posts/?feedView=all" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@CodeBegun" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/codebegun/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 quick-links">
+                        <h5></h5>
+                        <ul>
+                            <li><a href="./pages/privacypolicy.html">Privacy Policy</a></li>
+                            <li><a href="./pages/grievance-redressal.html">Grievance Redressal</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 quick-links">
+                        <h5></h5>
+                        <ul>
+                            <li><a href="./pages/cookie-policy.html">Cookie Policy</a></li>
+                            <li><a href="./pages/corporate-information.html">Corporate Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 quick-links">
+                        <h5></h5>
+                        <ul>
+                            <li><a href="./pages/terms-and-conditions.html">Terms and Conditions</a></li>
+                            <li><a href="./pages/vision-and-values.html">Vision and Values</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- Course Tracks -->
+                <div class="row course-tracks">
+                    <div class="col-md-12">
+                        <h6>Course Tracks</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><strong>MERN Stack Developer course:</strong></li>
+                            <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                    href="#">Mumbai</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><strong>Full Stack Developer course:</strong></li>
+                            <li><a href="#">Hyderabad</a>, <a href="#">Pune</a>, <a href="#">Delhi</a>, <a
+                                    href="#">Chennai</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><strong>Data Analytics course:</strong></li>
+                            <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                    href="#">Delhi</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><strong>QA / Automation Testing course:</strong></li>
+                            <li><a href="#">Bangalore</a>, <a href="#">Hyderabad</a>,<a href="#">Chennai</a>,<a
+                                    href="#">Pune</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom text-center">
+                    <p>&copy; 2024 Savas Tech Solution Pvt Ltd | All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="js/index.js"></script>
+        <!-- <script src="js/indeex1.js"></script> -->
+        <script src="js/registerNow.js"></script>
+        <script src="js/formValidation.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/sheets.js"></script>
+        <script>
+            const animateCounters = (id, target, delays, colors) => {
+                const element = document.querySelector(`#${id} .counter`);
+                const stat = document.querySelector(`#${id}`);
+                const [slowStart, fast, slowEnd] = delays;
+                let current = id === 'stat3' ? 180000 : 0;
+
+                const updateCounter = () => {
+                    const increment = current < target * 0.2
+                        ? Math.ceil((target * 0.2) / slowStart)
+                        : current < target * 0.8
+                            ? Math.ceil((target * 0.6) / fast)
+                            : Math.ceil((target * 0.2) / slowEnd);
+
+                    current += increment;
+                    if (current > target) current = target;
+
+                    if (id === 'stat3') {
+                        element.innerText = `₹${(current / 100000).toFixed(1)}L`;
+
+                        if (colors) {
+                            if (current <= 400000) {
+                                element.style.color = colors[0];
+                            } else if (current <= 800000) {
+                                element.style.color = colors[1];
+                            } else {
+                                element.style.color = colors[2];
+                            }
+                        }
+                    } else {
+                        element.innerText = current;
+                    }
+
+                    if (current < target) {
+                        const delay = current < target * 0.2 || current > target * 0.8 ? slowStart : fast;
+                        setTimeout(updateCounter, delay);
+                    } else {
+                        element.innerText += '+'; // Add the '+' symbol after animation completes
+                    }
+                };
+
+                stat.style.animation = id === 'stat1' ? 'fadeInTop 1s forwards' : 'fadeInTopRight 1s forwards';
+
+                setTimeout(() => {
+                    updateCounter();
+                }, id === 'stat1' ? 0 : id === 'stat2' ? 1500 : 3000);
+            };
+
+            animateCounters('stat1', 200, [100, 20, 100]);
+            animateCounters('stat2', 120, [50, 15, 100], ['#ff6b6b', '#ffa500', '#4caf50']);
+            animateCounters('stat3', 1400000, [60, 50, 30], ['#ff6b6b', '#ffa500', '#4caf50']);
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE BEGUN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet" />
+    <link href="../global.css" rel="stylesheet">
+    <style>
+        .form-container {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            color: #005897;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container .form-control {
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #ff5722;
+            border: none;
+        }
+
+        .form-container button:hover {
+            background-color: #e64a19;
+        }
+
+        .stats-section {
+            background-color: #005897;
+            /* Adjust the green background color as needed */
+            color: white;
+            padding: 20px 0;
+            border-radius: 10px;
+        }
+
+        .stats-item {
+            text-align: center;
+            border-right: 1px solid #ffffff50;
+            /* Light border between items */
+        }
+
+        .stats-item:last-child {
+            border-right: none;
+            /* Remove border from the last item */
+        }
+
+        .stats-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .stats-subtitle {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .eligibility-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .eligibility-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .eligibility-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .eligibility-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .eligibility-list li i {
+            color: green;
+            margin-right: 10px;
+        }
+
+        .details {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .details .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .details .detail-item i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .details .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .details .value {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tabs-section {
+            padding: 10px 0;
+            background-color: #f9f9f9;
+        }
+
+        .tab-content a {
+            display: block;
+            margin-bottom: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .tab-content a:hover {
+            text-decoration: underline;
+        }
+
+        .tabbtnimg {
+            width: 20px;
+            /* Adjust the image size */
+            margin-right: 8px;
+            /* Add space between the image and text */
+        }
+
+        #curriculum {
+            background-color: #f8f9fa;
+        }
+
+        .accordion-button {
+            font-weight: bold;
+        }
+
+        .accordion-body {
+            background-color: #ffffff;
+        }
+
+        .progress {
+            height: 25px;
+        }
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            background-color: #f1f1f1;
+        }
+
+        .accordion-body ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/Logos/CB_LOGO_LATEST_TR.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <!-- Left side: Navigation links -->
+                <ul class="navbar-nav" style="margin-top: 30px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="internships.html">Internship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+
+
+                    <button class="btn btn-primary d-flex align-items-center justify-content-center loginbtn">
+                        Log in <span></span>&nbsp;&nbsp; <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="top-banner">
+        <!-- Next batch starts <strong id="batchDate">8th November</strong>. Hurry, limited seats left! -->
+        <a href="#contact-form" style="text-decoration: none; color: white;">
+            Next batch starts <strong id="batchDate"> on Monday 8 November</strong>. Hurry,
+            limited seats left!
+        </a>
+    </div>
+
+
+    <!--Hero Section Start Here-->
+    <section class="internship-hero-section-detail bg-pink">
+        <div class="container">
+            <div class="row">
+                <!-- Left Content -->
+                <div class="col-lg-8 mb-6 mb-lg-0">
+                    <div class="internship-hero-content-detail">
+                        <!-- <h1>Learn, Build, and Excel –</h1> -->
+                        <!-- <h1>Free</h1> -->
+                        <!-- <h1 style="margin-bottom: 40px !important;">Become a Job-Ready Java Full Stack Developer in Just
+                            100 Days <br>
+                            <span class="animated-text1">Placement Assured in Hyderabad! </span>
+                        </h1> -->
+                        <h1 style="margin-bottom: 10px !important;">Placement-Assured</h1>
+                        <h1 style="margin-bottom: 10px !important;">Data Analytics Course</h1>
+                        <h1 style="margin-bottom: 45px !important;">In Hyderabad</h1>
+
+                        <!-- <h2 style="margin-bottom: 30px !important;"> Only 25 Memebers per Batch</h2> -->
+
+                        <!-- <p style="margin-bottom: 30px !important;">Master the skills to create powerful web applications
+                            and shape your future. Join today and embark on your path to becoming a proficient
+                            developer!
+                        </p> -->
+
+                        <ul class="eligibility-list">
+                            <li><i class="bi bi-check-circle-fill"></i>Limited Seats: Only <strong
+                                style="margin-left: 3px !important; margin-right: 3px !important"> 25
+                                    Students</strong>
+                                Per Batch</li>
+                            <li><i class="bi bi-check-circle-fill"></i><strong style="margin-left: 3px !important; margin-right: 3px !important;"> 120 Days </strong> to Learn, Build, and
+                                Secure Your Future
+                                in Tech. </li>
+                            <li><i class="bi bi-check-circle-fill"></i>No Coding Experience? No Problem! <strong style="margin-left: 3px !important; margin-right: 3px !important"> Start
+                                    from
+                                    Scratch </strong> and Become a Data Analyst !</li>
+                        </ul>
+                    </div>
+
+                    <section class="stats-section" style="margin-top: 53px !important;">
+                        <div class="container">
+                            <div class="row text-center">
+                                <!-- Item 1 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">120 Days</div>
+                                    <div class="stats-subtitle">With 3 Real Time Projects</div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">100%</div>
+                                    <div class="stats-subtitle">Real Time Tasks</div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">4.9 Ratings</div>
+                                    <div class="stats-subtitle">by 5000 Learners</div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="col-6 col-md-3 stats-item">
+                                    <div class="stats-title">Telugu</div>
+                                    <div class="stats-subtitle"> Language</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-4 mb-6">
+                    <div class="container">
+                        <div class="form-container" style="max-height: 450px; max-width: 99%;">
+                            <h2 class="text-center mb-4">Register Now</h2>
+                            <form id="enroll" name="submit-to-google-sheets">
+                                <!-- Full Name -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="Full Name" id="name" placeholder="Enter your name" required />
+                                    <span class="errorMessage1" id="nameError" style="color: red;"></span>
+                                </div>
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" name="Email" id="email" placeholder="Enter your email" required />
+                                    <span class="errorMessage1" id="emailError" style="color: red;"></span>
+                                </div>
+                                <!-- Phone -->
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" name="Phone" id="phone" placeholder="Enter your phone number" required maxlength="10" />
+                                    <span class="errorMessage1" id="phoneError" style="color: red;"></span>
+                                </div>
+                                <!-- Terms and Conditions -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="terms" required />
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the terms and conditions
+                                    </label>
+                                </div>
+                                <!-- Submit Button -->
+                                <button type="button" class="btn btn-primary w-100" onclick="RegisterCourseSubmit()">
+                                    Register
+                                </button>
+                            </form>
+                            <div id="successMessage1" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Section End Here-->
+
+
+
+    <section class="bg-white my-5 ">
+        <div class="container whychoose-javafullstack">
+            <h4 class="why-choose-text text-center mb-4">Why Choose <span class="animated-text">CODEBEGUN</span> for
+                Data Analytics ?</h4>
+
+            <div class="row gy-4">
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div>
+                        <h5>Comprehensive Technical Expertise</h5>
+                        <p>Mastering data analytics technologies, equipping you with the skills needed to make data-driven decisions and stay industry-ready.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+                    <div>
+                        <h5>Experienced Trainers</h5>
+                        <p>Learn from industry professionals with real-world expertise and insights into the latest
+                            trends
+                            and best practices.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div>
+                        <h5>Real-Time Projects</h5>
+                        <p>Work on live projects, developing end-to-end web applications to gain confidence and hands-on
+                            experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div>
+                        <h5>Job-Ready Curriculum</h5>
+                        <p>Get mock interviews, resume building, and a focus on problem-solving skills to ace technical
+                            interviews.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div>
+                        <h5>Guaranteed Job Assistance</h5>
+                        <p>Access exclusive hiring partners and career support to land your dream job in the tech
+                            industry.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-start">
+                    <div class="icon-box me-3">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                    </div>
+                    <div>
+                        <h5>Lifetime Learning Support</h5>
+                        <p>Enjoy lifetime access to materials, recorded sessions, and a vibrant alumni network for
+                            continued
+                            growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-light">
+        <div class="container" id="curriculum">
+            <h4 class="text-center">Data Analytics Course Curriculum (120 Days)</h4>
+            <div class="row">
+                <!-- Course Overview -->
+                <div class="col-md-12 mb-4">
+                    <p>This course provides a comprehensive journey into Data Analytics with real-world datasets, hands-on tasks, and industry-specific projects.</p>
+                </div>
+    
+                <!-- Course Modules -->
+                <div class="col-md-12 mb-4">
+                    <h4>Modules</h4>
+                    <div class="accordion" id="curriculumAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule1" aria-expanded="true" aria-controls="collapseModule1">
+                                    Module 1: Introduction to Data Analytics
+                                </button>
+                            </h2>
+                            <div id="collapseModule1" class="accordion-collapse collapse show"
+                                aria-labelledby="headingModule1" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-4">
+                                            <h5>Overview of Data Analytics</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Introduction to Data Analytics</li>
+                                                <li>Importance of Data-Driven Decisions</li>
+                                                <li>Data Analytics Process</li>
+                                                <li>Types of Analytics: Descriptive, Predictive, Prescriptive</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Data Collection & Preprocessing</h5>
+                                            <ul>
+                                                <li>Data Sources: Structured vs Unstructured Data</li>
+                                                <li>Data Collection Methods</li>
+                                                <li>Data Cleaning & Handling Missing Values</li>
+                                                <li>Data Transformation Techniques</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Data Analytics Tools</h5>
+                                            <ul>
+                                                <li>Introduction to Excel, SQL, and Python for Data Analytics</li>
+                                                <li>Setting Up Data Analytics Environment</li>
+                                                <li>Exploratory Data Analysis (EDA)</li>
+                                                <li>Data Visualization Tools</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Module 2: Statistics and Probability -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule2" aria-expanded="true" aria-controls="collapseModule2">
+                                    Module 2: Statistics and Probability
+                                </button>
+                            </h2>
+                            <div id="collapseModule2" class="accordion-collapse collapse"
+                                aria-labelledby="headingModule2" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-4">
+                                            <h5>Statistics Fundamentals</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Descriptive Statistics: Mean, Median, Mode</li>
+                                                <li>Probability Distributions: Normal, Binomial</li>
+                                                <li>Sampling Methods</li>
+                                                <li>Hypothesis Testing</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Inferential Statistics</h5>
+                                            <ul>
+                                                <li>Confidence Intervals</li>
+                                                <li>ANOVA (Analysis of Variance)</li>
+                                                <li>Chi-Square Test</li>
+                                                <li>Correlation and Regression Analysis</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Probability Theory</h5>
+                                            <ul>
+                                                <li>Bayesian Probability</li>
+                                                <li>Random Variables and Expectations</li>
+                                                <li>Law of Large Numbers</li>
+                                                <li>Monte Carlo Simulations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Module 3: Data Visualization and Reporting -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule3" aria-expanded="true" aria-controls="collapseModule3">
+                                    Module 3: Data Visualization and Reporting
+                                </button>
+                            </h2>
+                            <div id="collapseModule3" class="accordion-collapse collapse"
+                                aria-labelledby="headingModule3" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-4">
+                                            <h5>Visualization Tools</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Introduction to Tableau and Power BI</li>
+                                                <li>Creating Basic Charts and Graphs</li>
+                                                <li>Advanced Visualizations (Heatmaps, Tree Maps, etc.)</li>
+                                                <li>Interactive Dashboards</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Data Reporting</h5>
+                                            <ul>
+                                                <li>Building Effective Reports</li>
+                                                <li>Data Storytelling</li>
+                                                <li>Presenting Insights to Stakeholders</li>
+                                                <li>Automating Reports</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Advanced Visualization</h5>
+                                            <ul>
+                                                <li>Geospatial Data Visualization</li>
+                                                <li>Time-Series Analysis Visualization</li>
+                                                <li>Interactive Data Storytelling</li>
+                                                <li>Using Python (Matplotlib, Seaborn)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Module 4: Machine Learning for Data Analytics -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule4" aria-expanded="true" aria-controls="collapseModule4">
+                                    Module 4: Machine Learning for Data Analytics
+                                </button>
+                            </h2>
+                            <div id="collapseModule4" class="accordion-collapse collapse"
+                                aria-labelledby="headingModule4" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-4">
+                                            <h5>Introduction to Machine Learning</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Supervised vs Unsupervised Learning</li>
+                                                <li>Regression Models</li>
+                                                <li>Classification Models</li>
+                                                <li>Clustering and Dimensionality Reduction</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Practical Machine Learning</h5>
+                                            <ul>
+                                                <li>Building ML Models with Scikit-Learn</li>
+                                                <li>Model Evaluation Techniques</li>
+                                                <li>Overfitting and Underfitting</li>
+                                                <li>Feature Engineering</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Advanced ML Topics</h5>
+                                            <ul>
+                                                <li>Deep Learning Overview</li>
+                                                <li>Natural Language Processing (NLP)</li>
+                                                <li>Reinforcement Learning</li>
+                                                <li>Model Deployment and Integration</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Module 5: Data Analytics Projects -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule5" aria-expanded="true" aria-controls="collapseModule5">
+                                    Module 5: Projects
+                                </button>
+                            </h2>
+                            <div id="collapseModule5" class="accordion-collapse collapse"
+                                aria-labelledby="headingModule5" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-6">
+                                            <h5>Frontend Projects</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Project 1: Personal Portfolio Dashboard</li>
+                                                <li>Project 2: Real-Time Data Analytics Dashboard</li>
+                                                <li>Project 3: Interactive Survey Data Visualization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Backend Projects</h5>
+                                            <ul>
+                                                <li>Project 1: Sales Forecasting using Machine Learning</li>
+                                                <li>Project 2: Customer Segmentation Analysis</li>
+                                                <li>Project 3: Financial Data Forecasting</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row customhead">
+                                        <h5>Main Project</h5>
+                                        <p style="color: #005897 !important;"><strong>Project Name:</strong> E-commerce Data Analytics Platform</p>
+                                        <p>This project involves building a platform to analyze and visualize e-commerce sales data, customer behavior, and predictive insights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Module 6: Tools & Deployment -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingModule6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseModule6" aria-expanded="true" aria-controls="collapseModule6">
+                                    Module 6: Tools & Deployment
+                                </button>
+                            </h2>
+                            <div id="collapseModule6" class="accordion-collapse collapse"
+                                aria-labelledby="headingModule6" data-bs-parent="#curriculumAccordion">
+                                <div class="accordion-body">
+                                    <div class="row customhead">
+                                        <div class="col-md-6">
+                                            <h5>Tools Covered</h5>
+                                            <ul class="custom-list-course">
+                                                <li>Jupyter Notebooks</li>
+                                                <li>GitHub</li>
+                                                <li>Google Cloud Platform</li>
+                                                <li>AWS: Deployment of ML Models</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Development Tools</h5>
+                                            <ul>
+                                                <li>SQL for Database Management</li>
+                                                <li>Power BI/Tableau for Reporting</li>
+                                                <li>Deployment on AWS/Heroku</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <!-- Call to Action -->
+                <div class="col-md-12 text-center mt-4">
+                    <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="features-section bg-white">
+
+        <div class="container">
+            <h4 class="features-header">Our Course Features</h4>
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <!-- Feature 1 -->
+                    <div class="feature-item">
+                        <i class="bi bi-person-badge feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Mock Interviews by Industry Experts</div>
+                            <p class="feature-description">Practice real-world interview scenarios conducted by
+                                experienced industry experts.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-item">
+                        <i class="bi bi-tools feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Real World Tasks</div>
+                            <p class="feature-description">Engage in hands-on real-world tasks and projects to gain
+                                practical experience and skills.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-item">
+                        <i class="bi bi-code-slash feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Coding Challenges</div>
+                            <p class="feature-description">Solve advanced coding problems designed to enhance your
+                                programming and problem-solving abilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <!-- Feature 4 -->
+                    <div class="feature-item">
+                        <i class="bi bi-chat-square-dots feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Conduct GD and JAMs</div>
+                            <p class="feature-description">Participate in Group Discussions (GD) and Just A Minute (JAM)
+                                sessions to improve your communication and presentation skills.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="feature-item">
+                        <i class="bi bi-briefcase feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Placement Support</div>
+                            <p class="feature-description">Receive end-to-end placement assistance to help you secure
+                                your dream job.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="feature-item">
+                        <i class="bi bi-person-video3 feature-icon"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">One-on-One Technical Help Sessions</div>
+                            <p class="feature-description">Get personalized technical guidance and support through
+                                dedicated one-on-one sessions with our experts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-5 techcovred">
+        <div class="container">
+            <h4 class="text-center mb-4">Technologies Covered In This Course</h4>
+            <div class="row text-center">
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/python.jpeg" alt="python" class="img-fluid">
+                        <p>Python</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/tab.png" alt="Tableau" class="img-fluid">
+                        <p>Tableau</p>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/matlab.svg" alt="Matlab" class="img-fluid">
+                        <p>Matlab</p>
+                    </div>
+                </div>
+               
+                
+               
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/Cassandra_logo.svg.png" alt="Cassandra" class="img-fluid">
+                        <p>Cassandra</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/Couchbase.png" alt="Couchbase" class="img-fluid">
+                        <p>Couchbase</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/redis.png" alt="JavaScript" class="img-fluid">
+                        <p>Redis</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/amazonRedshift1.png" alt="amazonRedshift" class="img-fluid">
+                        <p>Amazon Redshift</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/google_bigquery_logo.png" alt="Google BigQuery" class="img-fluid">
+                        <p>Google BigQuery</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/cloudStorage.png" alt="CloudStorage" class="img-fluid">
+                        <p>Cloud Storage</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/etl.png" alt="ETL" class="img-fluid">
+                        <p>ETL</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/spss-1.svg" alt="SPSS" class="img-fluid">
+                        <p>SPSS</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/mongo.png" alt="Mongo DB" class="img-fluid">
+                        <p>Mongo DB</p>
+                    </div>
+                </div>
+                            
+                
+                
+            </div>
+
+           
+
+            <div class="row text-center">
+              
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/mysql.png" alt="My SQL" class="img-fluid">
+                        <p>My SQL</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/microsoft-sql-server (1).png" alt="Microsoft SQL Server" class="img-fluid">
+                        <p>Microsoft SQL Server</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/postgreSql.jpeg" alt="PostgreSql" class="img-fluid">
+                        <p>PostgreSql</p>
+                    </div>
+                </div>
+               
+               
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/looker.png" alt="Looker" class="img-fluid">
+                        <p>Looker</p>
+                    </div>
+                </div>
+               
+               
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/googleColab.jpeg" alt="Google Colab" class="img-fluid">
+                        <p>Google Colab</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/jupyterLogo.svg" alt="Jupyter" class="img-fluid">
+                        <p>Jupyter</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/git.png" alt="GIT" class="img-fluid">
+                        <p>GIT</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <div class="icon-card">
+                        <img src="../images/Courses/JavafullStack/github.png" alt="GIT HUB" class="img-fluid">
+                        <p>GITHUB</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="certificate-showcase py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Description -->
+                <div class="col-md-6">
+                    <h4 class="text-primary mb-3">Certificate of Excellence</h4>
+                    <p>
+                        Earn a certificate that validates your skills and expertise. Our certificates are recognized by
+                        industry leaders and provide a competitive edge in the job market. Showcase your achievement and
+                        stand out as a professional.
+                    </p>
+                    <ul>
+                        <li><strong>Recognition of Outstanding Performance</strong> </li>
+                        <P> The Certificate of Excellence serves as a testament to the recipient's exceptional skills,
+                            dedication, and commitment to achieving high standards in their learning journey.</P>
+                        <li><strong>Industry-Validated Achievement</strong> </li>
+                        <p>This certification signifies mastery of real-world projects and cutting-edge technologies,
+                            making it a highly respected credential in the professional world.</p>
+                        <li><strong>Boost to Career Aspirations</strong> </li>
+                        <li><strong>Proof of Practical Expertise</strong> </li>
+                        <li><strong>Inspiration for Lifelong Learning</strong> </li>
+                    </ul>
+
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="col-md-6 text-center">
+                    <img src="../images/courses/certificate.png" alt="Certificate"
+                        class="img-fluid rounded shadow" style="max-height: 450px; max-width: 90% !important;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-5 alumni">
+        <div class="container">
+            <h4 class="text-primary mb-3">Our Alumni Work with the Best, and So Can You!</h4>
+            <div class="row">
+
+                <img src="../images/Courses/JavafullStack/companies-collage.webp" alt="Java Full Stack"
+                    class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light py-5" id="advantages">
+        <div class="container">
+            <h4 class="text-center mb-4">Advantages of Choosing Data Analytics Career</h4>
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">High Demand</h5>
+                                    <!-- <p class="card-text">Java Full Stack Developers are highly sought-after in the industry,
+                                    ensuring a secure and rewarding career.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Versatility</h5>
+                                    <!-- <p class="card-text">Work across front-end, back-end, and database layers, showcasing your diverse development skills.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-tools fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Comprehensive Skill Set</h5>
+                                    <!-- <p class="card-text">Master front-end and back-end technologies along with database and
+                                    deployment tools.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Career Growth</h5>
+                                    <!-- <p class="card-text">Move into senior roles like Technical Lead, Architect, or Project
+                                    Manager as you gain experience.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-dollar-sign fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Competitive Salary</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-graduation-cap fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Continuous Learning</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Remote Work</h5>
+                                    <!-- <p class="card-text">Enjoy the flexibility of working remotely with global clients
+                                        and companies.</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Job Security</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-industry fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Diverse Industries</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-lightbulb fa-2x text-primary mb-3"></i>
+                                    <h5 class="card-title">Entrepreneurial Opportunities</h5>
+                                    <!-- <p class="card-text">Leverage your full-stack knowledge to build your own software
+                                        products or freelance.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div id="chart-container">
+                        <div class="chart-header">
+                            <h2>Data Analyst Salary Chart</h2>
+                            <p>Compare salaries across companies and experience levels</p>
+                        </div>
+                        <canvas id="salaryChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section py-5 bg-white">
+        <div class="container">
+            <h4 class="text-center mb-4">About Data Analytics Course</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../images/Courses/JavafullStack/faq-list1.png" alt="FAQ" class="img-fluid" style="max-height: 75% !important;">
+                </div>
+                <div class="col-md-6">
+                    <div class="js-faq-list accordion" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dacollapseOne" aria-expanded="true" aria-controls="dacollapseOne">
+                                    What is a Data Analytics Professional?
+                                </button>
+                            </h2>
+                            <div id="dacollapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A Data Analytics Professional is skilled in gathering, processing, and analyzing data to uncover trends, patterns, and insights. They are proficient in technologies such as Excel, SQL, Python, R, and machine learning.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Question 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dacollapse2" aria-expanded="true" aria-controls="dacollapse2">
+                                    Is a Data Analytics career a secure choice in India?
+                                </button>
+                            </h2>
+                            <div id="dacollapse2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, Data Analytics is a rapidly growing field in India, offering high demand, lucrative salaries, and opportunities across various industries like healthcare, finance, e-commerce, and more.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dacollapse3" aria-expanded="true" aria-controls="dacollapse3">
+                                    Do I get a certificate at the end of the Data Analytics course?
+                                </button>
+                            </h2>
+                            <div id="dacollapse3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, upon successful completion of the Data Analytics course, you will receive a certificate that validates your skills in the field.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dacollapse4" aria-expanded="true" aria-controls="dacollapse4">
+                                    Will I gain practical knowledge from the Data Analytics course?
+                                </button>
+                            </h2>
+                            <div id="dacollapse4" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, the course focuses on hands-on projects, real-world data, and case studies to provide practical knowledge and prepare you for industry challenges.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Question 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dacollapse5" aria-expanded="true" aria-controls="dacollapse5">
+                                    Are the trainers experienced and working professionals?
+                                </button>
+                            </h2>
+                            <div id="dacollapse5" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, our trainers are industry experts with extensive experience in data analytics and are actively involved in analytics projects across different sectors.
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="trainers" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="text-center mb-5">Meet Our Experienced Trainers</h4>
+            <div class="row">
+                <!-- Trainer 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="trainer-card text-center">
+                        <img src="../images/Courses/JavafullStack/tr1.png" alt="Trainer 1" class="trainer-image">
+                        <h4 class="mt-4">Siva Prasad G</h4>
+                        <p class="experience">14+ Years Experience</p>
+                        <p class="trainer-info">Senior Data Scientist, Specialized in Data Analytics, Machine Learning, and Cloud Computing.</p>
+
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="trainer-card text-center">
+                        <img src="../images/Courses/JavafullStack/Srikanth_sir.jpg" alt="Trainer 2" class="trainer-image">
+                        <h4 class="mt-4">Srikanth B</h4>
+                        <p class="experience">12+ Years Experience</p>
+                        <p class="trainer-info">Expert in Data Visualization, Statistical Analysis, and Predictive Modeling using Python and R programming.</p>
+                    </p>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="trainer-card text-center">
+                        <img src="../images/Courses/JavafullStack/tr3.png" alt="Trainer 3" class="trainer-image">
+                        <h4 class="mt-4">Surya Kiran N</h4>
+                        <p class="experience">12+ Years Experience</p>
+                        <p class="trainer-info">Specialist in Database Management (SQL, MongoDB) and Big Data Processing (Hadoop, Spark).</p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <section class="contact-us-section bg-white" id="45DaysInternshipContact">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-5 contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Connect with us to explore our hands-on, industry-focused courses designed to elevate your skills
+                        and career prospects. Discover learning tailored for real-world success!</p>
+                    <div class="contact-details">
+
+                        <p><i class="fas fa-phone"></i> <a
+                                href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun"
+                                id="contactus">+91-6301099587</a></p>
+                        <p><i class="fas fa-envelope"></i><a href="mailto:hr@codebegun.com"
+                                id="contactus">hr@codebegun.com</a></p>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-7 contact-form" id="contact-form">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Enter Full Name" required>
+                        <input type="text" class="form-control" placeholder="Enter Mobile Number" required>
+                        <input type="email" class="form-control" placeholder="Enter Email Address" required>
+                      
+                        <div class="my-3">
+                            <label for="internshipSelect" class="form-label">Select Course:</label>
+                            <select class="form-select" id="internshipSelect" name="internship">
+                                <option value="" disabled selected>-- Choose a Course --</option>
+                                <option value="java">Java FullStack</option>
+                                <option value="python">Python FullStack</option>
+                                <option value="angular">Angular Developement</option>
+                                <option value="react">React Developement</option>
+                                <option value="data-science">Data Science </option>
+                                <option value="data-analyst">Data Analyst</option>
+                                <option value=".net">.Net FullStack </option>
+                                <option value="cloudcomputing">Cloud Computing</option>
+                                <option value="mern">Mern Stack</option>
+                                <option value="mean">Mean Stack</option>
+                                <option value="ai&ml">AI&ML</option>
+                                <option value="gen-ai">Gen AI</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" rows="3" placeholder="Enter Your Message" required></textarea>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section class="contact-us-section bg-white" id="homepageContact">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-5 contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Connect with us to explore our hands-on, industry-focused courses designed to elevate your
+                        skills
+                        and career prospects. Discover learning tailored for real-world success!</p>
+                    <div class="contact-details">
+
+                        <p><i class="fas fa-phone"></i> <a
+                                href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun"
+                                id="contactus">+91-6301099587</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:hr@codebegun.com"
+                                id="contactus">hr@codebegun.com</a></p>
+                    </div>
+                </div>
+                <div   name="submit-to-google-sheet" class="col-md-7 contact-form" id="contact-form">
+                    <form class="GetInTouch" name="submit-to-google-sheet" id="contactForm">
+                        <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter Full Name" required>
+                        <span class="errorMessage" id="nameError" style="color: red;"></span>
+                
+                        <input type="text" class="form-control" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile Number" required maxlength="10">
+                        <span class="errorMessage" id="mobileNumberError" style="color: red;"></span>
+                
+                        <input type="email" class="form-control" name="emailAdd" id="emailAdd" placeholder="Enter Email Address" required>
+                        <span class="errorMessage" id="emailError" style="color: red;"></span>
+                
+                        <div class="my-3">
+                            <label for="internshipSelect" class="form-label">Select Course:</label>
+                            <select class="form-select" id="internshipSelect" name="course">
+                                <option value="" disabled selected>-- Choose a Course --</option>
+                                <option value="java">Java FullStack</option>
+                                <option value="python">Python FullStack</option>
+                                <option value="angular">Angular Development</option>
+                                <option value="react">React Development</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="data-analyst">Data Analyst</option>
+                                <option value=".net">.Net FullStack</option>
+                                <option value="cloudcomputing">Cloud Computing</option>
+                                <option value="mern">MERN Stack</option>
+                                <option value="mean">MEAN Stack</option>
+                                <option value="ai&ml">AI & ML</option>
+                                <option value="gen-ai">Gen AI</option>
+                            </select>
+                        </div>
+                
+                        <textarea class="form-control" rows="3" name="message" id="message" placeholder="Enter Your Message" required></textarea>
+                        <span class="errorMessage" id="messageError" style="color: red;"></span>
+                
+                        <button type="button" class="btn submit-btn" id="submitButton" onclick="handleFormSubmit()">Submit</button>
+                        <div class="success" id="successMessage" style="color: green;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Contact Info -->
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="../images/Logos/CB_LOGO_LATEST.png" alt="Logo" style="width: 200px !important;">
+                    </div>
+                    <p>Reach Us</p>
+
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/916301099587?text=Hello%20!!.%20 I want to Know About%20to%20codebegun">+91-63010
+                        99 587</a></p>
+                    <p id="Reachus"><i class="fab fa-whatsapp"></i><a
+                            href="https://wa.me/919392401143?text=Hello%20!!.%20 I want to know about %20to%20codebegun">
+                            +91-93924 01 143</a></p>
+                    <p id="Reachus"><i class="fab fa-whatsapp"></i> <a
+                            href="https://wa.me/919392402848?text=Hello%20!!.%I want to Know about %20to%20codebegun">
+                            +91-93924 02 848
+                        </a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:hr@codebegun.com">hr@codebegun.com</a></p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 quick-links">
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#course-list">Courses</a></li>
+                        <li><a href="internships.html">Internship</a></li>
+                        <li><a href="#">Challanges</a></li>
+                        <li><a href="#">Hire with Us</a></li>
+                        <li><a href="#45DaysInternshipContact">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 quick-links">
+
+                    <h5>Courses</h5>
+                    <ul>
+                        <li><a href="javafullstackmain.html">Java Full Stack</a></li>
+                        <li><a href="mernStack.html">Mern Stack </a></li>
+                        <li><a href="meanStack.html">Mean Stack</a></li>
+                        <li><a href="pythonfullStack.html">Python Full Stack</a></li>
+                        <li><a href="reactJsDevelopment.html">React Development</a></li>
+                        <li><a href="angularJsDevelopment.html">Angular Developement Satck</a></li>
+                        <li><a href="datascience.html">Data Science</a></li>
+                        <li><a href="dataAnalytics.html">Data Analyst</a></li>
+                        <li><a href="dotNet.html">.Net FullStack</a></li>
+                        <li><a href="ai&Ml.html">AI&ML</a></li>
+                        <li><a href="genAI.html">Gen-AI</a></li>
+                        <li><a href="cloudcomputing.html">Cloud Computing</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+
+                    <h5>Locations</h5>
+                    <h6>Madhapur</h6>
+
+                    <p> Plot No.4, Flat N0.102, SM Reddy Complex, House No.1-98/8/9/A, Madhapur, Hyderabad, Telangana
+                        500081</p>
+
+                    <h6>Ameerpet</h6>
+
+                    <p>3rd Floor, Plot No. 47, SAP St, beside Mythrivanam, Kumar Basti, Gayatri Nagar, Srinivasa Nagar,
+                        Ameerpet, Hyderabad, Telangana 500016</p>
+
+
+                </div>
+
+            </div>
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1ut7vgqnTQdE82tS/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="https://www.linkedin.com/company/codbegun/posts/?feedView=all" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@CodeBegun" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/codebegun/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="grievance-redressal.html">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="corporate-information.html">Corporate Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 quick-links">
+                    <h5></h5>
+                    <ul>
+                        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                        <li><a href="vision-and-values.html">Vision and Values</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Course Tracks -->
+            <div class="row course-tracks">
+                <div class="col-md-12">
+                    <h6>Course Tracks</h6>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>MERN Stack Developer course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>Full Stack Developer course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Pune</a>, <a href="#">Delhi</a>, <a
+                                href="#">Chennai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>Data Analytics course:</strong></li>
+                        <li><a href="#">Hyderabad</a>, <a href="#">Bangalore</a>, <a href="#">Pune</a>, <a
+                                href="#">Delhi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><strong>QA / Automation Testing course:</strong></li>
+                        <li><a href="#">Bangalore</a>, <a href="#">Hyderabad</a>,<a href="#">Chennai</a>,<a
+                                href="#">Pune</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-center">
+                <p>&copy; 2024 Savas Tech Solution Pvt Ltd | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="../js/index.js"></script>
+    <!-- <script src="../js/sheets.js"></script> -->
+    <script src="../js/formValidation.js"></script>
+    <script src="../js/registerNow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('salaryChart').getContext('2d');
+        const salaryChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['TCS', 'Infosys', 'Google', 'Microsoft', 'Amazon'], // Companies
+                datasets: [
+                    {
+                        label: 'Fresher',
+                        data: [4, 5, 12, 14, 15], // Salaries in LPA
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                    },
+                    {
+                        label: 'Mid-Level',
+                        data: [8, 9, 20, 22, 25],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    },
+                    {
+                        label: 'Experienced',
+                        data: [15, 18, 35, 40, 50],
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.dataset.label}: ₹${context.raw} LPA`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Salary (LPA)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Companies'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        // Dynamically split the CODEBEGUN text into letters
+        const text = document.querySelector(".animated-text");
+        const word = "CODEBEGUN";
+        text.innerHTML = word
+            .split("")
+            .map((letter, index) => `<span style="--order: ${index}">${letter}</span>`)
+            .join("");
+
+        const text1 = document.querySelector(".animated-text1");
+        const word1 = "Placement Assured in Hyderabad!";
+        text1.innerHTML = word1
+            .split("")
+            .map((letter, index) => `<span style="--order: ${index}">${letter}</span>`)
+            .join("");
+    </script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const firstNameField = document.getElementById("name");
+            if (firstNameField) {
+                firstNameField.focus();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
