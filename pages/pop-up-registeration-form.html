@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,6 +71,151 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="js/register.js"></script> -->
+ <script src="js/register.js"></script> 
 </body>
-</html>
+</html> 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CODE BEGUN</title>
+
+    <link rel="icon" href="logo-1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .card {
+            border-radius: 12px;
+        }
+        .btn-primary {
+            background-color: #005897;
+            border-color: #005897;
+        }
+        .btn-primary:hover {
+            background-color: #00406f;
+            border-color: #00406f;
+        }
+        .btn-outline-secondary {
+            color: #005897;
+            border-color: #005897;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #005897;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="container my-5" id="registration">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+                <h3 class="text-center mb-4">Register Now</h3>
+
+                <form id="registrationForm">
+
+                    <input type="text" name="fullName" class="form-control mb-3"
+                           placeholder="Full Name" required>
+
+                    <input type="email" name="email" class="form-control mb-3"
+                           placeholder="Email Address" required>
+
+                    <input type="tel" name="phone" class="form-control mb-3"
+                           placeholder="Phone Number" required>
+
+                    <select name="gender" class="form-control mb-3" required>
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+
+                    <input type="text" name="qualification" class="form-control mb-3"
+                           placeholder="Qualification" required>
+
+                    <select name="course" class="form-control mb-3" required>
+                        <option value="">Interested Course</option>
+                        <option>Java Full Stack</option>
+                        <option>Python Full Stack</option>
+                        <option>MERN Stack</option>
+                        <option>Data Analytics</option>
+                    </select>
+
+                    <select name="mode" class="form-control mb-3" required>
+                        <option value="">Mode of Interest</option>
+                        <option>Online</option>
+                        <option>Offline</option>
+                        <option>Hybrid</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary w-100 mb-2">
+                        Submit Registration
+                    </button>
+
+                    <button type="button" class="btn btn-outline-secondary w-100"
+                            onclick="window.history.back()">
+                        ⬅ Go Back
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script>
+    // Replace with your deployed Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyYJrnAv1BcgPn4TnXK62jV0YNvSLPKequGRI6MuzzysNh2NqS9Tosy36JDJvHL-Sw2/exec";
+    // Use CORS proxy (for localhost only)
+const proxyURL = "https://cors-anywhere.herokuapp.com/" + scriptURL;
+
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const data = {
+            fullName: form.fullName.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            gender: form.gender.value,
+            qualification: form.qualification.value,
+            course: form.course.value,
+            mode: form.mode.value
+        };
+
+        fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(() => {
+            alert("✅ Registration Successful! Our team will contact you soon.");
+            form.reset();
+        })
+        .catch(err => {
+            alert("❌ Error submitting form. Please try again later.");
+            console.error(err);
+        });
+    });
+</script>  
+
+
+
+
+</body>
+</html> -->
+
