@@ -1,0 +1,63 @@
+ <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Logos/CB_LOGO_LATEST_TR.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <!-- Left side: Navigation links -->
+                    <ul class="navbar-nav" style="margin-top: 30px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#course-list">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/internships.html">Internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Events</a>
+                        </li>
+
+                    </ul>
+                    <div class="d-flex">
+
+                        <!-- <button class="login-btn">
+                        Log in <span>&rarr;</span>
+                    </button> -->
+                        <button
+                            class="btn btn-primary d-flex align-items-center justify-content-center loginbtn open-popup-btn">
+                            Log in <span></span>&nbsp;&nbsp; <span>&rarr;</span>
+                        </button>
+                        <div class="popup-overlay" id="popup">
+                            <div class="popup-content">
+                                <span class="close-btn" id="closeBtn">&times;</span>
+
+                                <h2 style="font-family: roboto; font-weight: bold; color:solid black;">Login</h2>
+                                <!-- <button><a href="#contact-form"><i class="fa-solid fa-xmark"></i></a></button> -->
+
+                                <form id="login-signup">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" placeholder="Enter your username" required>
+
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" placeholder="Enter your password" required>
+
+                                    <button type="submit" class="submit-btn">Login</button>
+                                </form>
+                                <p>Not Registered Yet!!</p>
+
+                                <button class=" btn-primary signup btn open-popup-btn">Signup</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </nav>

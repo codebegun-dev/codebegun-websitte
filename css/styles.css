@@ -1,0 +1,105 @@
+ 
+        .stats-container {
+            /* display: flex; */
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat {
+            width: 200px;
+            font-size: 1.5rem;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: transform 0.5s, color 0.5s;
+            margin-top: 20px !important;
+        }
+
+        .stat p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #005897;
+        }
+
+        #stat1 p {
+            color: #F9A61A;
+            /* Blue for students */
+        }
+        #stat2 p {
+            color: #005897;
+            /* Blue for students */
+        }
+        #stat3 p {
+            color:#359aad;
+            /* Blue for students */
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            transform: scale(1.2);
+        }
+
+        #stat1 .counter {
+            color:#005897;
+            /* Blue for students */
+        }
+
+        #stat2 .counter {
+            color: #F9A61A;
+            /* Yellow for placements */
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTopRight {
+            from {
+                opacity: 0;
+                transform: translate(20px, -20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+    
+
+
+    /* Popup image responsive fix */
+.popup-img {
+  max-width: 250px;
+  margin: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .popup-img {
+    max-width: 90%;
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+}
