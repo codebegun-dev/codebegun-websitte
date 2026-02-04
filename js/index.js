@@ -137,7 +137,7 @@ load("pop-up-registration", "components/pop-up-registration.html", () => {
   }, 5000);
 });
 window.redirectToRegister = function () {
-  window.location.href = "pages/pop-up-registeration-form.html";
+  window.location.href = "pages/requestCallBack.html";
 };
 
 
