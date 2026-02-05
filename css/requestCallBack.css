@@ -108,22 +108,33 @@
 
     .left-section {
         height: auto;
-        padding: 60px 20px;
+        padding: 30px 15px;
+        justify-content: flex-start; /* IMPORTANT */
     }
 
     .leftside-styling {
+        padding: 0;                /* REMOVE desktop padding */
         text-align: center;
+        max-width: 100%;
+    }
+
+    .leftside-styling h1 {
+        font-size: 26px;
+        line-height: 1.3;
     }
 
     .leftside-styling ul {
         text-align: left;
-        display: inline-block;
+        padding-left: 20px;
+        margin-bottom: 25px;
     }
 
-    .leftside-styling h1 {
-        font-size: 32px;
+    .leftside-styling img {
+        width: 220px;              /* Smaller image */
+        margin: 0 auto;            /* Center image */
     }
 }
+
 
 
 

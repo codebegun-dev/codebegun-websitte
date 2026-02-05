@@ -11,6 +11,8 @@ const qualificationField = document.getElementById("qualification");
 const courseField = document.getElementById("course");
 const modeField = document.getElementById("mode");
 const messageField = document.getElementById("message");
+const formMessage = document.getElementById("formMessage");
+
 
 /* ===== LIVE VALIDATION EVENTS ===== */
 nameField.addEventListener("input", () => validateField(nameField, "name", 3));
@@ -186,19 +188,54 @@ form.addEventListener("submit", function (e) {
     if (stateField) formData.state = stateField.value.trim();
 
     // Submit to Google Script
-    fetch("https://script.google.com/macros/s/AKfycbz0LKRUPW1GtP7Yp1SWvwIfz8m3s8nu03Y_u3LTy2eiivT5W4LRihaRXmKFytba0dSx/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzUPsOVSXbmv4NdQ6Oj4Q75AOg9l8c_Qs4O27trHkCTMEogzpzZkUBNJbS1ezZ42uBA/exec", {
         method: "POST",
         body: JSON.stringify(formData)
     })
     .then(response => response.json())
     .then(data => {
-        alert("✅ Registration Successful! Our team will contact you soon.");
+
+    // 🔁 CLEAR PREVIOUS DUPLICATE ERRORS
+    showSuccess(emailField);
+    showSuccess(mobileField);
+
+    // ❌ DUPLICATE CHECK (EMAIL / MOBILE)
+    if (data.status === "duplicate") {
+
+        if (data.field === "email") {
+            showError(emailField, "This email is already registered");
+            emailField.focus();
+        }
+
+        if (data.field === "mobile") {
+            showError(mobileField, "This mobile number is already registered");
+            mobileField.focus();
+        }
+
+        return; // ⛔ STOP HERE (do not reset form)
+    }
+
+    // ✅ SUCCESS CASE
+    if (data.status === "success") {
+        formMessage.innerHTML = `
+            <div class="alert alert-success">
+                ✅ Registration successful! Our team will contact you shortly.
+            </div>
+        `;
         form.reset();
         removeSuccessStyles();
-        document.getElementById("qualification-extra").innerHTML = ""; // remove dynamic fields
-    })
+        document.getElementById("qualification-extra").innerHTML = "";
+    }
+})
+
+
     .catch(error => {
-        alert("❌ Error saving data. Please try again.");
-        console.error(error);
-    });
+    console.error(error);
+    formMessage.innerHTML = `
+        <div class="alert alert-danger">
+            ❌ Something went wrong. Please try again later.
+        </div>
+    `;
+});
+
 });
